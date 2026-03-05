@@ -207,6 +207,42 @@ export const readingList = [
     ],
   },
   {
+    topic: 'Self-Improvement',
+    subtopics: [
+      {
+        name: 'Self-Reflection & Self-Correction',
+        papers: [
+          { title: 'Reflexion: Language Agents with Verbal Reinforcement Learning', authors: 'Shinn et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2303.11366' },
+          { title: 'Self-Refine: Iterative Refinement with Self-Feedback', authors: 'Madaan et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2303.17651' },
+          { title: 'CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing', authors: 'Gou et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2305.11738' },
+          { title: 'Self-Debugging: Teaching LLMs to Debug Their Own Predicted Program', authors: 'Chen et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2304.05128' },
+          { title: 'Large Language Models Cannot Self-Correct Reasoning Yet', authors: 'Huang et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2310.01798' },
+          { title: 'When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs', authors: 'Kamoi et al.', venue: 'TMLR 2025', url: 'https://arxiv.org/abs/2406.01297' },
+        ],
+      },
+      {
+        name: 'Self-Training & Learning from Feedback',
+        papers: [
+          { title: 'STaR: Bootstrapping Reasoning With Reasoning', authors: 'Zelikman et al.', venue: 'NeurIPS 2022', url: 'https://arxiv.org/abs/2203.14465' },
+          { title: 'Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models (SPIN)', authors: 'Chen et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2401.01335' },
+          { title: 'Self-Rewarding Language Models', authors: 'Yuan et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2401.10020' },
+          { title: 'Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models (ReST-EM)', authors: 'Singh et al.', venue: 'TMLR 2024', url: 'https://arxiv.org/abs/2312.06585' },
+          { title: 'Reinforcement Learning from Human Feedback for Language Models: A Survey', authors: 'Kaufmann et al.', venue: 'TMLR 2024', url: 'https://arxiv.org/abs/2408.11685' },
+        ],
+      },
+      {
+        name: 'Self-Evolution & Continuous Improvement',
+        papers: [
+          { title: 'A Comprehensive Survey of Self-Evolving AI Agents', authors: 'Fang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.07407' },
+          { title: 'Eureka: Human-Level Reward Design via Coding Large Language Models', authors: 'Ma et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2310.12931' },
+          { title: 'Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains', authors: 'Subramaniam et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2501.05707' },
+          { title: 'Agent-as-a-Judge: Evaluate Agents with Agents', authors: 'Zhuge et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2410.10934' },
+          { title: 'Absolute Zero: Reinforced Self-play Reasoning with Zero Data', authors: 'Zhao et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2505.03335' },
+        ],
+      },
+    ],
+  },
+  {
     topic: 'Performance Evaluation & Verification',
     subtopics: [
       {
@@ -240,7 +276,6 @@ export const readingList = [
           { title: 'A Survey on AgentOps: Categorization, Challenges, and Future Directions', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.02121' },
           { title: 'Architecting AgentOps Needs CHANGE', authors: 'Biswas et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2601.06456' },
           { title: 'The 2025 AI Agent Index', authors: 'Staufer et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.17753' },
-          { title: 'AIOS: LLM Agent Operating System', authors: 'Mei et al.', venue: 'COLM 2025', url: 'https://arxiv.org/abs/2403.16971' },
           { title: 'MI9 -- Agent Intelligence Protocol: Runtime Governance for Agentic AI Systems', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.03858' },
         ],
       },
@@ -285,8 +320,18 @@ export const readingList = [
     ],
   },
   {
-    topic: 'Efficiency & Systems Optimization',
+    topic: 'Efficiency & Agentic AI Systems',
     subtopics: [
+      {
+        name: 'Agentic AI Systems',
+        papers: [
+          { title: 'AIOS: LLM Agent Operating System', authors: 'Mei et al.', venue: 'COLM 2025', url: 'https://arxiv.org/abs/2403.16971' },
+          { title: 'AgentScope: A Flexible yet Robust Multi-Agent Platform', authors: 'Gao et al.', venue: 'ACL 2024 Demo', url: 'https://arxiv.org/abs/2402.14034' },
+          { title: 'OS-Copilot: Towards Generalist Computer Agents with Self-Improvement', authors: 'Wu et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2402.07456' },
+          { title: 'Internet of Agents: Weaving a Web of Heterogeneous Agents for Collaborative Intelligence', authors: 'Chen et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2407.07061' },
+          { title: 'Sibyl: Simple yet Effective Agent Framework for Complex Real-World Reasoning', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.09382' },
+        ],
+      },
       {
         name: 'LLM Serving & Inference',
         papers: [
