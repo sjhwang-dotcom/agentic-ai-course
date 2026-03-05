@@ -159,6 +159,61 @@ img { max-width: 100%; display: block; }
 .footer-bottom-links a { font-size: 13px; color: #94A3B8; transition: color 0.2s; }
 .footer-bottom-links a:hover { color: #64748B; }
 
+/* ========== Teams Page ========== */
+.teams-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F8FAFC; min-height: 100vh; }
+
+.teams-header { padding: 48px 0 40px; background: #FFFFFF; border-bottom: 1px solid #E2E8F0; }
+.teams-header h1 { font-size: 36px; font-weight: 700; color: #0F172A; letter-spacing: -0.03em; margin: 12px 0 8px; }
+.teams-header p { font-size: 16px; color: #64748B; line-height: 1.7; }
+.teams-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: #64748B; transition: color 0.2s; }
+.teams-back:hover { color: #1E293B; }
+
+.teams-post-section { padding: 32px 0; }
+.teams-post-btn { width: 100%; padding: 20px; background: #FFFFFF; border: 2px dashed #CBD5E1; border-radius: 12px; font-family: inherit; font-size: 16px; font-weight: 600; color: #64748B; cursor: pointer; transition: all 0.2s; }
+.teams-post-btn:hover { border-color: #94A3B8; color: #475569; }
+
+.teams-form { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 28px; }
+.teams-form h3 { font-size: 18px; font-weight: 700; color: #0F172A; margin-bottom: 20px; }
+.teams-form-row { margin-bottom: 16px; }
+.teams-form-row label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+.teams-form-row input, .teams-form-row textarea { width: 100%; padding: 10px 14px; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit; font-size: 14px; color: #1E293B; background: #F8FAFC; transition: border-color 0.2s; resize: vertical; }
+.teams-form-row input:focus, .teams-form-row textarea:focus { outline: none; border-color: #94A3B8; background: #FFFFFF; }
+.teams-form-actions { display: flex; gap: 12px; }
+.teams-submit-btn { padding: 10px 24px; background: #1E293B; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+.teams-submit-btn:hover { background: #334155; }
+.teams-cancel-btn { padding: 10px 24px; background: #FFFFFF; color: #64748B; font-family: inherit; font-size: 14px; font-weight: 500; border: 1px solid #E2E8F0; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+.teams-cancel-btn:hover { background: #F8FAFC; color: #475569; }
+
+.teams-feed { padding-bottom: 32px; }
+.teams-feed-title { font-size: 20px; font-weight: 700; color: #0F172A; margin-bottom: 20px; letter-spacing: -0.02em; }
+.teams-empty { padding: 48px; text-align: center; color: #94A3B8; font-size: 15px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; }
+
+.teams-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin-bottom: 16px; transition: all 0.2s; }
+.teams-card:hover { border-color: #CBD5E1; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.teams-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.teams-card-author { display: flex; align-items: center; gap: 12px; }
+.teams-card-avatar { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #F1F5F9; border-radius: 50%; font-size: 14px; font-weight: 700; color: #475569; flex-shrink: 0; }
+.teams-card-author strong { font-size: 15px; font-weight: 600; color: #1E293B; }
+.teams-card-dept { display: block; font-size: 12px; color: #94A3B8; margin-top: 2px; }
+.teams-card-time { font-size: 13px; color: #94A3B8; }
+.teams-card-idea { font-size: 15px; color: #475569; line-height: 1.7; margin-bottom: 20px; }
+
+.teams-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid #F1F5F9; }
+.teams-card-members { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.teams-card-members-label { font-size: 12px; font-weight: 600; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em; }
+.teams-card-member { padding: 3px 10px; background: #F1F5F9; border-radius: 6px; font-size: 12px; font-weight: 500; color: #475569; }
+.teams-card-member--interested { background: #EFF6FF; color: #3B82F6; }
+
+.teams-card-actions { display: flex; gap: 8px; }
+.teams-interest-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 500; color: #64748B; cursor: pointer; transition: all 0.2s; }
+.teams-interest-btn:hover { background: #EFF6FF; border-color: #BFDBFE; color: #3B82F6; }
+.teams-delete-btn { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; cursor: pointer; color: #94A3B8; transition: all 0.2s; }
+.teams-delete-btn:hover { background: #FEF2F2; border-color: #FECACA; color: #EF4444; }
+
+.teams-footer { padding: 24px 0; background: #FFFFFF; border-top: 1px solid #E2E8F0; text-align: center; font-size: 14px; color: #94A3B8; }
+.teams-footer a { color: #64748B; transition: color 0.2s; }
+.teams-footer a:hover { color: #1E293B; }
+
 /* ========== Animations ========== */
 .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -192,4 +247,6 @@ img { max-width: 100%; display: block; }
   .logistics-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .teams-header h1 { font-size: 28px; }
+  .teams-card-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
 }

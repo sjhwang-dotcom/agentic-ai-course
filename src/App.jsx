@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Overview from './components/Overview'
@@ -7,8 +8,9 @@ import FAQ from './components/FAQ'
 import Logistics from './components/Logistics'
 import Schedule from './components/Schedule'
 import Footer from './components/Footer'
+import ProjectIdeas from './pages/Teams'
 
-export default function App() {
+function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,5 +39,16 @@ export default function App() {
       <Schedule />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ideas" element={<ProjectIdeas />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
