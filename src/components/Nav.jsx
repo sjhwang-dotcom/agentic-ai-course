@@ -19,7 +19,7 @@ export default function Nav() {
           Agentic AI
         </a>
         <div className={`nav-links${open ? ' open' : ''}`}>
-          {['Overview', 'Grading', 'Instructor', 'FAQ', 'Schedule'].map((item) => (
+          {['Overview', 'Grading', 'FAQ', 'Schedule'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}

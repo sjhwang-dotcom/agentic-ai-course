@@ -102,17 +102,16 @@ img { max-width: 100%; display: block; }
 .reading-paper--recent { border-left: 3px solid #22C55E; }
 
 /* ========== Grading ========== */
-.grading-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px; }
+.grading-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 .grading-card { padding: 32px 28px; text-align: center; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; }
 .grading-value { font-size: 42px; font-weight: 800; color: #0F172A; letter-spacing: -0.04em; line-height: 1; margin-bottom: 12px; }
 .grading-label { font-size: 15px; font-weight: 600; color: #1E293B; margin-bottom: 8px; }
 .grading-desc { font-size: 14px; color: #64748B; line-height: 1.6; }
-.grading-breakdown { max-width: 640px; margin: 0 auto; padding: 32px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; }
-.grading-breakdown h3 { font-size: 17px; font-weight: 600; color: #1E293B; margin-bottom: 20px; text-align: center; }
-.grading-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #F1F5F9; }
-.grading-row:last-child { border-bottom: none; }
-.grading-row-label { font-size: 15px; color: #475569; }
-.grading-row-value { font-size: 15px; font-weight: 600; color: #1E293B; }
+.grading-card--project { border-color: #CBD5E1; }
+.grading-project-breakdown { margin-top: 16px; padding-top: 16px; border-top: 1px solid #F1F5F9; text-align: left; }
+.grading-project-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; }
+.grading-project-row span:first-child { color: #64748B; }
+.grading-project-row span:last-child { font-weight: 600; color: #1E293B; }
 
 /* ========== Instructor ========== */
 .instructor-compact { display: flex; justify-content: center; }
@@ -183,7 +182,7 @@ img { max-width: 100%; display: block; }
   .section { padding: 72px 0; }
   .section-title { font-size: 28px; }
   .overview-grid { grid-template-columns: 1fr; }
-  .grading-grid { grid-template-columns: 1fr 1fr; }
+  .grading-grid { grid-template-columns: 1fr; }
   .schedule-item-header { flex-direction: column; gap: 16px; }
   .schedule-readings-toggle { margin-left: 0; }
   .schedule-readings-inner { padding-left: 0; }

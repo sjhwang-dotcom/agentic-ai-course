@@ -17,30 +17,24 @@ export default function Grading() {
             <div className="grading-label">Paper Presentation</div>
             <div className="grading-desc">Present and lead discussion on a recent agentic AI research paper during seminar.</div>
           </div>
-          <div className="grading-card">
+          <div className="grading-card grading-card--project">
             <div className="grading-value">60%</div>
             <div className="grading-label">Course Project</div>
-            <div className="grading-desc">Team project building an AI agent system: proposal, midterm, and final deliverables.</div>
-          </div>
-          <div className="grading-card">
-            <div className="grading-value">A+</div>
-            <div className="grading-label">Grade Scale</div>
-            <div className="grading-desc">Standard KAIST graduate grading scale. No curve enforcement.</div>
-          </div>
-        </div>
-        <div className="grading-breakdown fade-in">
-          <h3>Project Breakdown (60% Total)</h3>
-          <div className="grading-row">
-            <span className="grading-row-label">Project Proposal (no presentation)</span>
-            <span className="grading-row-value">10%</span>
-          </div>
-          <div className="grading-row">
-            <span className="grading-row-label">Midterm Report &amp; Presentation</span>
-            <span className="grading-row-value">20%</span>
-          </div>
-          <div className="grading-row">
-            <span className="grading-row-label">Final Report &amp; Presentation</span>
-            <span className="grading-row-value">30%</span>
+            <div className="grading-desc">Team project building an AI agent system with three milestones.</div>
+            <div className="grading-project-breakdown">
+              <div className="grading-project-row">
+                <span>Proposal (written)</span>
+                <span>10%</span>
+              </div>
+              <div className="grading-project-row">
+                <span>Midterm Report &amp; Presentation</span>
+                <span>20%</span>
+              </div>
+              <div className="grading-project-row">
+                <span>Final Report &amp; Presentation</span>
+                <span>30%</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

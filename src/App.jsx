@@ -3,7 +3,6 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Overview from './components/Overview'
 import Grading from './components/Grading'
-import Instructor from './components/Instructor'
 import FAQ from './components/FAQ'
 import Logistics from './components/Logistics'
 import Schedule from './components/Schedule'
@@ -34,7 +33,6 @@ export default function App() {
       <Overview />
       <Grading />
       <Logistics />
-      <Instructor />
       <FAQ />
       <Schedule />
       <Footer />

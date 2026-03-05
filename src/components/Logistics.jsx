@@ -3,7 +3,6 @@ const items = [
   { label: 'Schedule', value: 'Friday 9:00 – 12:00' },
   { label: 'Format', value: '1.5h Lecture + 1.5h Seminar' },
   { label: 'Location', value: 'TBD' },
-  { label: 'Department', value: 'Kim Jaechul Graduate School of AI' },
   { label: 'Instructor', value: 'Prof. Sung Ju Hwang' },
   { label: 'Contact', value: 'sungju.hwang@kaist.ac.kr' },
 ]

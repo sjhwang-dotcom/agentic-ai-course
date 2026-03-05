@@ -26,7 +26,6 @@ export default function Footer() {
             <ul>
               <li><a href="#overview">Overview</a></li>
               <li><a href="#grading">Grading</a></li>
-              <li><a href="#instructor">Instructor</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#schedule">Schedule</a></li>
             </ul>
