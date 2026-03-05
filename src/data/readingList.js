@@ -41,23 +41,27 @@ export const readingList = [
           { title: 'Chain-of-Thought Prompting Elicits Reasoning in Large Language Models', authors: 'Wei et al.', venue: 'NeurIPS 2022', url: 'https://arxiv.org/abs/2201.11903' },
           { title: 'Self-Consistency Improves Chain of Thought Reasoning in Language Models', authors: 'Wang et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2203.11171' },
           { title: 'Least-to-Most Prompting Enables Complex Reasoning in Large Language Models', authors: 'Zhou et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2205.10625' },
-          { title: 'Scaling Test-Time Compute for LLM Agents', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2506.12928' },
+          { title: 'Reasoning with Language Model is Planning with World Model (RAP)', authors: 'Hao et al.', venue: 'EMNLP 2023', url: 'https://arxiv.org/abs/2305.14992' },
+          { title: 'Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters', authors: 'Snell et al.', venue: 'ICML 2025', url: 'https://arxiv.org/abs/2408.03314' },
         ],
       },
       {
-        name: 'Tree Search & Planning',
+        name: 'Search & Planning',
         papers: [
           { title: 'Tree of Thoughts: Deliberate Problem Solving with Large Language Models', authors: 'Yao et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2305.10601' },
           { title: 'Plan-and-Solve Prompting', authors: 'Wang et al.', venue: 'ACL 2023', url: 'https://arxiv.org/abs/2305.04091' },
           { title: 'Language Agent Tree Search Unifies Reasoning, Acting, and Planning (LATS)', authors: 'Zhou et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2310.04406' },
           { title: 'Graph of Thoughts: Solving Elaborate Problems with Large Language Models', authors: 'Besta et al.', venue: 'AAAI 2024', url: 'https://arxiv.org/abs/2308.09687' },
+          { title: 'Understanding the Planning of LLM Agents: A Survey', authors: 'Huang et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2402.02716' },
+          { title: 'On the Planning Abilities of Large Language Models', authors: 'Valmeekam et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2302.06706' },
         ],
       },
       {
-        name: 'Grounded Acting & Self-Reflection',
+        name: 'Grounded Acting & ReAct',
         papers: [
           { title: 'ReAct: Synergizing Reasoning and Acting in Language Models', authors: 'Yao et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2210.03629' },
           { title: 'Reflexion: Language Agents with Verbal Reinforcement Learning', authors: 'Shinn et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2303.11366' },
+          { title: 'FireAct: Toward Language Agent Fine-tuning', authors: 'Chen et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2310.05915' },
           { title: 'Towards a Science of Scaling Agent Systems', authors: 'Kim et al.', venue: 'arXiv 2025 (Google Research)', url: 'https://arxiv.org/abs/2512.08296' },
         ],
       },
@@ -398,6 +402,39 @@ export const readingList = [
     ],
   },
   {
+    topic: 'Enterprise & Data Agents',
+    subtopics: [
+      {
+        name: 'Text-to-SQL & Data Agents',
+        papers: [
+          { title: 'DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction', authors: 'Pourreza & Rafiei', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2304.11015' },
+          { title: 'DAIL-SQL: Efficient Few-Shot Text-to-SQL with Dynamic Example Selection', authors: 'Gao et al.', venue: 'VLDB 2024', url: 'https://arxiv.org/abs/2308.15363' },
+          { title: 'MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL', authors: 'Wang et al.', venue: 'Findings of ACL 2024', url: 'https://arxiv.org/abs/2312.11242' },
+          { title: 'CHESS: Contextual Harnessing for Efficient SQL Synthesis', authors: 'Talaei et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2405.16755' },
+          { title: 'Spider 2.0: Evaluating Language Models on Real-World Enterprise Text-to-SQL Workflows', authors: 'Lei et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2411.07763' },
+        ],
+      },
+      {
+        name: 'Enterprise Workflow Agents',
+        papers: [
+          { title: 'TaskWeaver: A Code-First Agent Framework for Seamlessly Planning and Executing Data Analytics Tasks', authors: 'Qiao et al.', venue: 'arXiv 2023 (Microsoft)', url: 'https://arxiv.org/abs/2311.17541' },
+          { title: 'WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?', authors: 'Drouin et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2403.07718' },
+          { title: 'TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks', authors: 'Xu et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2412.14161' },
+          { title: 'Tau-Bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains', authors: 'Yao et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2406.12045' },
+        ],
+      },
+      {
+        name: 'Retrieval-Augmented & Knowledge Agents',
+        papers: [
+          { title: 'Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity', authors: 'Jeong et al.', venue: 'NAACL 2024', url: 'https://arxiv.org/abs/2403.14403' },
+          { title: 'CRAG -- Comprehensive RAG Benchmark', authors: 'Yang et al.', venue: 'arXiv 2024 (Meta)', url: 'https://arxiv.org/abs/2406.04744' },
+          { title: 'Agentic RAG: Boosting LLM Reasoning and Autonomy through Intelligent Retrieval', authors: 'Singh et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2501.09136' },
+          { title: 'A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models', authors: 'Fan et al.', venue: 'KDD 2024', url: 'https://arxiv.org/abs/2405.06211' },
+        ],
+      },
+    ],
+  },
+  {
     topic: 'Desktop & Web Agents',
     subtopics: [
       {
@@ -433,71 +470,36 @@ export const readingList = [
     ],
   },
   {
-    topic: 'Embodied Agents',
+    topic: 'Embodied & Social Agents',
     subtopics: [
       {
-        name: 'Language-Guided Control',
+        name: 'Embodied Agents & Robotics',
         papers: [
           { title: 'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (SayCan)', authors: 'Ahn et al.', venue: 'CoRL 2022', url: 'https://arxiv.org/abs/2204.01691' },
-          { title: 'Inner Monologue: Embodied Reasoning through Planning with Language Models', authors: 'Huang et al.', venue: 'CoRL 2022', url: 'https://arxiv.org/abs/2207.05608' },
           { title: 'Code as Policies: Language Model Programs for Embodied Control', authors: 'Liang et al.', venue: 'ICRA 2023', url: 'https://arxiv.org/abs/2209.07753' },
           { title: 'Voyager: An Open-Ended Embodied Agent with Large Language Models', authors: 'Wang et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2305.16291' },
-          { title: 'DEPS: Interactive Planning with LLMs Enables Open-World Multi-Task Agents', authors: 'Wang et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2302.01560' },
           { title: 'PaLM-E: An Embodied Multimodal Language Model', authors: 'Driess et al.', venue: 'ICML 2023', url: 'https://arxiv.org/abs/2303.03378' },
-        ],
-      },
-      {
-        name: 'Vision-Language-Action Models',
-        papers: [
-          { title: 'RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control', authors: 'Brohan et al.', venue: 'CoRL 2023', url: 'https://arxiv.org/abs/2307.15818' },
           { title: 'π₀: A Vision-Language-Action Flow Model for General Robot Control', authors: 'Black et al.', venue: 'arXiv 2024 (Physical Intelligence)', url: 'https://arxiv.org/abs/2410.24164' },
-          { title: 'π₀.5: A Vision-Language-Action Model with Open-World Generalization', authors: 'Physical Intelligence', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2504.16054' },
-          { title: 'OpenVLA: An Open-Source Vision-Language-Action Model', authors: 'Kim et al.', venue: 'CoRL 2024', url: 'https://arxiv.org/abs/2406.09246' },
-          { title: 'A Survey on Vision-Language-Action Models for Embodied AI', authors: 'Ma et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2405.14093' },
-        ],
-      },
-      {
-        name: 'Generalist Policies',
-        papers: [
-          { title: 'Open X-Embodiment: Robotic Learning Datasets and RT-X Models', authors: 'Open X-Embodiment Collaboration', venue: 'ICRA 2024', url: 'https://arxiv.org/abs/2310.08864' },
-          { title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion', authors: 'Chi et al.', venue: 'RSS 2023', url: 'https://arxiv.org/abs/2303.04137' },
-          { title: 'Octo: An Open-Source Generalist Robot Policy', authors: 'Ghosh et al.', venue: 'RSS 2024', url: 'https://arxiv.org/abs/2405.12213' },
           { title: 'Towards Embodied Agentic AI: LLM- and VLM-Driven Robot Autonomy', authors: 'Salimpour et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.05294' },
         ],
       },
-    ],
-  },
-  {
-    topic: 'Social & Empathetic Agents',
-    subtopics: [
       {
-        name: 'Social Simulation',
+        name: 'Social Simulation & Generative Agents',
         papers: [
           { title: 'Generative Agents: Interactive Simulacra of Human Behavior', authors: 'Park et al.', venue: 'UIST 2023', url: 'https://arxiv.org/abs/2304.03442' },
           { title: 'Social Simulacra: Creating Populated Prototypes for Social Computing Systems', authors: 'Park et al.', venue: 'UIST 2022', url: 'https://arxiv.org/abs/2208.04024' },
-          { title: 'Using Large Language Models to Simulate Multiple Humans and Replicate Human Subject Studies', authors: 'Aher et al.', venue: 'ICML 2023', url: 'https://arxiv.org/abs/2208.10264' },
           { title: 'AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents', authors: 'Piao et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.08691' },
-          { title: 'LLM Agents That Act Like Us: Accurate Human Behavior Simulation with Real-World Data', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2503.20749' },
-        ],
-      },
-      {
-        name: 'Social Intelligence',
-        papers: [
           { title: 'SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents', authors: 'Zhou et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2310.11667' },
           { title: 'SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents', authors: 'Wang et al.', venue: 'ACL 2024', url: 'https://arxiv.org/abs/2403.08715' },
-          { title: 'Sotopia-RL: Reward Design for Social Intelligence', authors: 'Yu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.03905' },
-          { title: 'Population-Aligned Persona Generation for LLM-based Social Simulation', authors: 'Hu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.10127' },
-          { title: 'SCOPE: Socially-Grounded Persona Framework for User Simulation', authors: 'Various', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2601.07110' },
         ],
       },
       {
         name: 'Persona & Theory of Mind',
         papers: [
-          { title: 'Towards Empathetic Open-domain Conversation Models: A New Benchmark and Dataset', authors: 'Rashkin et al.', venue: 'ACL 2019', url: 'https://arxiv.org/abs/1811.00207' },
           { title: 'Theory of Mind Might Have Spontaneously Emerged in Large Language Models', authors: 'Kosinski', venue: 'PNAS 2024', url: 'https://arxiv.org/abs/2302.02083' },
           { title: 'Character-LLM: A Trainable Agent for Role-Playing', authors: 'Shao et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2310.10158' },
-          { title: 'Systematizing LLM Persona Design for AI Companion Applications', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.02979' },
           { title: 'Infusing Theory of Mind into Socially Intelligent LLM Agents', authors: 'Hwang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.22887' },
+          { title: 'Systematizing LLM Persona Design for AI Companion Applications', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.02979' },
         ],
       },
     ],
