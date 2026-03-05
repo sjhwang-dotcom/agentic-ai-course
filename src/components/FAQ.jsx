@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'How can I contact the instructor?',
-    a: 'You can reach Prof. Hwang via email at sjhwang82@kaist.ac.kr. Office hours and TA information will be announced at the start of the semester. Course announcements will be shared through KLMS.',
+    a: 'You can reach Prof. Hwang via email at sungju.hwang@kaist.ac.kr. Office hours and TA information will be announced at the start of the semester. Course announcements will be shared through KLMS.',
   },
 ]
 

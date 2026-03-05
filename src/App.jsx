@@ -2,12 +2,11 @@ import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Overview from './components/Overview'
-import Curriculum from './components/Curriculum'
-import ReadingList from './components/ReadingList'
 import Grading from './components/Grading'
 import Instructor from './components/Instructor'
 import FAQ from './components/FAQ'
 import Logistics from './components/Logistics'
+import Schedule from './components/Schedule'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -33,12 +32,11 @@ export default function App() {
       <Nav />
       <Hero />
       <Overview />
-      <Curriculum />
-      <ReadingList />
       <Grading />
+      <Logistics />
       <Instructor />
       <FAQ />
-      <Logistics />
+      <Schedule />
       <Footer />
     </>
   )

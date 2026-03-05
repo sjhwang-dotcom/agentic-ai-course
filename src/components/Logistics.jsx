@@ -1,10 +1,11 @@
 const items = [
+  { label: 'Semester', value: 'Spring 2026 (Mar 6 – Jun 19)' },
   { label: 'Schedule', value: 'Friday 9:00 – 12:00' },
   { label: 'Format', value: '1.5h Lecture + 1.5h Seminar' },
   { label: 'Location', value: 'TBD' },
   { label: 'Department', value: 'Kim Jaechul Graduate School of AI' },
   { label: 'Instructor', value: 'Prof. Sung Ju Hwang' },
-  { label: 'Contact', value: 'sjhwang82@kaist.ac.kr' },
+  { label: 'Contact', value: 'sungju.hwang@kaist.ac.kr' },
 ]
 
 export default function Logistics() {

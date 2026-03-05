@@ -5,16 +5,16 @@ export default function Hero() {
         <div className="fade-in">
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
-            KAIST Graduate School of AI &middot; Fall 2025
+            KAIST Graduate School of AI &middot; Spring 2026
           </div>
-          <h1>Introduction to<br />Agentic AI</h1>
+          <h1>Agentic AI</h1>
           <p className="hero-sub">
             A comprehensive graduate course covering the design, implementation, and deployment
             of AI agent systems &mdash; from architecture patterns and tool use to real-world applications.
           </p>
           <div className="hero-actions">
-            <a href="#curriculum" className="btn-primary">
-              View Curriculum
+            <a href="#schedule" className="btn-primary">
+              View Schedule
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
