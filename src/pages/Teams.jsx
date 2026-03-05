@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 export default function ProjectIdeas() {
   const [ideas, setIdeas] = useState([])
   const [name, setName] = useState('')
+  const [title, setTitle] = useState('')
   const [idea, setIdea] = useState('')
   const [showForm, setShowForm] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -22,15 +23,16 @@ export default function ProjectIdeas() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!name.trim() || !idea.trim()) return
+    if (!name.trim() || !title.trim() || !idea.trim()) return
     try {
       const res = await fetch('/api/ideas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ author: name.trim(), idea: idea.trim() }),
+        body: JSON.stringify({ author: name.trim(), title: title.trim(), idea: idea.trim() }),
       })
       if (res.ok) {
         setName('')
+        setTitle('')
         setIdea('')
         setShowForm(false)
         fetchIdeas()
@@ -67,25 +69,70 @@ export default function ProjectIdeas() {
   }
 
   return (
-    <div className="teams-page">
-      <header className="teams-header">
+    <div className="ideas-page">
+      <header className="ideas-header">
         <div className="container">
-          <a href="/" className="teams-back">&larr; Course Home</a>
+          <a href="/" className="ideas-back">&larr; Course Home</a>
           <h1>Project Ideas</h1>
           <p>Share your project idea and find teammates. Browse ideas and express interest to join.</p>
         </div>
       </header>
 
       <main className="container">
-        <section className="teams-post-section">
+        {/* Card Grid */}
+        <section className="ideas-grid">
+          {loading && <div className="ideas-empty">Loading...</div>}
+          {!loading && ideas.length === 0 && (
+            <div className="ideas-empty">
+              No ideas posted yet. Be the first to share your project idea!
+            </div>
+          )}
+          {ideas.map((item) => (
+            <div className="idea-card" key={item.id}>
+              <div className="idea-card-body">
+                <h3 className="idea-card-title">{item.title || 'Untitled'}</h3>
+                <p className="idea-card-desc">{item.idea}</p>
+              </div>
+              <div className="idea-card-meta">
+                <div className="idea-card-author">
+                  <span className="idea-card-avatar">{item.author[0]}</span>
+                  <span>{item.author}</span>
+                </div>
+                <span className="idea-card-time">
+                  {new Date(item.created_at).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })}
+                </span>
+              </div>
+              {item.interested && item.interested.length > 0 && (
+                <div className="idea-card-interested">
+                  <span className="idea-card-interested-label">Interested</span>
+                  {item.interested.map((m) => (
+                    <span className="idea-card-interested-name" key={m.id}>{m.name}</span>
+                  ))}
+                </div>
+              )}
+              <div className="idea-card-actions">
+                <button className="idea-btn-interest" onClick={() => handleInterest(item.id)}>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 3c-2-2-5.5-.5-5.5 2.5C2.5 9 8 13 8 13s5.5-4 5.5-7.5C13.5 2.5 10 1 8 3z"/></svg>
+                  I'm interested
+                </button>
+                <button className="idea-btn-delete" onClick={() => handleDelete(item.id)} title="Delete">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 4h12M5.33 4V2.67a1.33 1.33 0 011.34-1.34h2.66a1.33 1.33 0 011.34 1.34V4M12.67 4v9.33a1.33 1.33 0 01-1.34 1.34H4.67a1.33 1.33 0 01-1.34-1.34V4"/></svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </section>
+
+        {/* Post Form */}
+        <section className="ideas-post-section">
           {!showForm ? (
-            <button className="teams-post-btn" onClick={() => setShowForm(true)}>
+            <button className="ideas-post-btn" onClick={() => setShowForm(true)}>
               + Post a Project Idea
             </button>
           ) : (
-            <form className="teams-form" onSubmit={handleSubmit}>
+            <form className="ideas-form" onSubmit={handleSubmit}>
               <h3>Post Your Project Idea</h3>
-              <div className="teams-form-row">
+              <div className="ideas-form-row">
                 <label>Name</label>
                 <input
                   type="text"
@@ -95,73 +142,36 @@ export default function ProjectIdeas() {
                   required
                 />
               </div>
-              <div className="teams-form-row">
-                <label>Project Idea</label>
-                <textarea
-                  value={idea}
-                  onChange={(e) => setIdea(e.target.value)}
-                  placeholder="Describe your project idea..."
-                  rows={4}
+              <div className="ideas-form-row">
+                <label>Project Title</label>
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="A short, descriptive title for your project"
                   required
                 />
               </div>
-              <div className="teams-form-actions">
-                <button type="submit" className="teams-submit-btn">Post Idea</button>
-                <button type="button" className="teams-cancel-btn" onClick={() => setShowForm(false)}>Cancel</button>
+              <div className="ideas-form-row">
+                <label>Description</label>
+                <textarea
+                  value={idea}
+                  onChange={(e) => setIdea(e.target.value)}
+                  placeholder="Describe your project idea in detail — what problem does it solve, what agents/tools will you build, what's the expected outcome?"
+                  rows={10}
+                  required
+                />
+              </div>
+              <div className="ideas-form-actions">
+                <button type="submit" className="ideas-submit-btn">Post Idea</button>
+                <button type="button" className="ideas-cancel-btn" onClick={() => setShowForm(false)}>Cancel</button>
               </div>
             </form>
           )}
         </section>
-
-        <section className="teams-feed">
-          <h2 className="teams-feed-title">Project Ideas ({ideas.length})</h2>
-          {loading && <div className="teams-empty">Loading...</div>}
-          {!loading && ideas.length === 0 && (
-            <div className="teams-empty">
-              No ideas posted yet. Be the first to share your project idea!
-            </div>
-          )}
-          {ideas.map((item) => (
-            <div className="teams-card" key={item.id}>
-              <div className="teams-card-header">
-                <div className="teams-card-author">
-                  <span className="teams-card-avatar">{item.author[0]}</span>
-                  <div>
-                    <strong>{item.author}</strong>
-                  </div>
-                </div>
-                <span className="teams-card-time">
-                  {new Date(item.created_at).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })}
-                </span>
-              </div>
-              <div className="teams-card-idea">{item.idea}</div>
-              <div className="teams-card-footer">
-                <div className="teams-card-members">
-                  {item.interested && item.interested.length > 0 && (
-                    <>
-                      <span className="teams-card-members-label">Interested</span>
-                      {item.interested.map((m) => (
-                        <span className="teams-card-member teams-card-member--interested" key={m.id}>{m.name}</span>
-                      ))}
-                    </>
-                  )}
-                </div>
-                <div className="teams-card-actions">
-                  <button className="teams-interest-btn" onClick={() => handleInterest(item.id)}>
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 3c-2-2-5.5-.5-5.5 2.5C2.5 9 8 13 8 13s5.5-4 5.5-7.5C13.5 2.5 10 1 8 3z"/></svg>
-                    I'm interested
-                  </button>
-                  <button className="teams-delete-btn" onClick={() => handleDelete(item.id)} title="Delete">
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 4h12M5.33 4V2.67a1.33 1.33 0 011.34-1.34h2.66a1.33 1.33 0 011.34 1.34V4M12.67 4v9.33a1.33 1.33 0 01-1.34 1.34H4.67a1.33 1.33 0 01-1.34-1.34V4"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
       </main>
 
-      <footer className="teams-footer">
+      <footer className="ideas-footer">
         <div className="container">
           AI 89900 Agentic AI &middot; KAIST Spring 2026 &middot;{' '}
           <a href="/">Back to Course</a>

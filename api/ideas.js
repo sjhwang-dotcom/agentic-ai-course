@@ -17,12 +17,12 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    const { author, idea } = req.body
+    const { author, title, idea } = req.body
     if (!author || !idea) {
       return res.status(400).json({ error: 'author and idea are required' })
     }
     const result = await sql`
-      INSERT INTO ideas (author, idea) VALUES (${author}, ${idea})
+      INSERT INTO ideas (author, title, idea) VALUES (${author}, ${title || ''}, ${idea})
       RETURNING *
     `
     return res.status(201).json(result[0])

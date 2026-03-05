@@ -7,6 +7,7 @@ export default async function handler(req, res) {
     CREATE TABLE IF NOT EXISTS ideas (
       id SERIAL PRIMARY KEY,
       author TEXT NOT NULL,
+      title TEXT NOT NULL DEFAULT '',
       idea TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT NOW()
     )
@@ -19,6 +20,10 @@ export default async function handler(req, res) {
       name TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT NOW()
     )
+  `
+
+  await sql`
+    ALTER TABLE ideas ADD COLUMN IF NOT EXISTS title TEXT NOT NULL DEFAULT ''
   `
 
   res.status(200).json({ ok: true, message: 'Tables created' })
