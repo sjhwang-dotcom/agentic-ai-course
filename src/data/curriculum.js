@@ -50,9 +50,9 @@ export const curriculum = [
   {
     week: 'W7',
     date: 'Apr 17',
-    title: 'Performance Evaluation',
-    desc: 'Benchmarks, evaluation frameworks, tracing and observability, and systematic testing methodologies for AI agent systems.',
-    tags: ['Benchmarks', 'Tracing', 'Evaluation Metrics'],
+    title: 'Performance Evaluation & Verification',
+    desc: 'Benchmarks, verifiability, reproducibility, AgentOps observability, and systematic testing methodologies for AI agent systems.',
+    tags: ['Benchmarks', 'Verifiability', 'AgentOps'],
     readingIdx: 6,
   },
   {
@@ -74,9 +74,9 @@ export const curriculum = [
   {
     week: 'W10',
     date: 'May 8',
-    title: 'AgentOps & Infrastructure',
-    desc: 'Operational best practices for deploying agents: monitoring, logging, cost management, error recovery, and human-in-the-loop patterns.',
-    tags: ['Monitoring', 'Cost Management', 'Human-in-the-Loop'],
+    title: 'Efficiency & Systems Optimization',
+    desc: 'LLM serving, inference optimization, agent runtime scaling, cost and latency optimization for production agent systems.',
+    tags: ['LLM Serving', 'Cost Optimization', 'Agent Runtime'],
     readingIdx: 8,
   },
   {

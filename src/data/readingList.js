@@ -36,7 +36,7 @@ export const readingList = [
     topic: 'Agentic Architecture Patterns',
     subtopics: [
       {
-        name: 'Reasoning & Chain-of-Thought',
+        name: 'Chain-of-Thought & Reasoning',
         papers: [
           { title: 'Chain-of-Thought Prompting Elicits Reasoning in Large Language Models', authors: 'Wei et al.', venue: 'NeurIPS 2022', url: 'https://arxiv.org/abs/2201.11903' },
           { title: 'Self-Consistency Improves Chain of Thought Reasoning in Language Models', authors: 'Wang et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2203.11171' },
@@ -45,7 +45,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Search & Planning',
+        name: 'Tree Search & Planning',
         papers: [
           { title: 'Tree of Thoughts: Deliberate Problem Solving with Large Language Models', authors: 'Yao et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2305.10601' },
           { title: 'Plan-and-Solve Prompting', authors: 'Wang et al.', venue: 'ACL 2023', url: 'https://arxiv.org/abs/2305.04091' },
@@ -54,7 +54,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Reasoning-Action & Reflection',
+        name: 'Grounded Acting & Self-Reflection',
         papers: [
           { title: 'ReAct: Synergizing Reasoning and Acting in Language Models', authors: 'Yao et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2210.03629' },
           { title: 'Reflexion: Language Agents with Verbal Reinforcement Learning', authors: 'Shinn et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2303.11366' },
@@ -67,22 +67,25 @@ export const readingList = [
     topic: 'Tools & Function Calling',
     subtopics: [
       {
-        name: 'Tool-Augmented LLMs',
+        name: 'Tool Calling',
         papers: [
           { title: 'Toolformer: Language Models Can Teach Themselves to Use Tools', authors: 'Schick et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2302.04761' },
+          { title: 'Gorilla: Large Language Model Connected with Massive APIs', authors: 'Patil et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2305.15334' },
+          { title: 'ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs', authors: 'Qin et al.', venue: 'ICLR 2024 Spotlight', url: 'https://arxiv.org/abs/2307.16789' },
           { title: 'TALM: Tool Augmented Language Models', authors: 'Parisi et al.', venue: 'arXiv 2022', url: 'https://arxiv.org/abs/2205.12255' },
-          { title: 'ART: Automatic Multi-step Reasoning and Tool-use', authors: 'Paranjape et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2303.09014' },
-          { title: 'Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models', authors: 'Lu et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2304.09842' },
-          { title: 'ToolACE: Winning the Points of LLM Function Calling', authors: 'Liu et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2409.00920' },
+          { title: 'Hammer: Robust Function-Calling for On-Device Language Models via Function Masking', authors: 'Lin et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2410.04587' },
+          { title: 'Facilitating Multi-turn Function Calling for LLMs via Compositional Instruction Tuning', authors: 'Chen et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2410.12952' },
+          { title: 'The Berkeley Function Calling Leaderboard (BFCL)', authors: 'Patil et al.', venue: 'ICML 2025', url: 'https://arxiv.org/abs/2409.18157' },
         ],
       },
       {
-        name: 'API Orchestration & Benchmarks',
+        name: 'Tool Creation & Discovery',
         papers: [
-          { title: 'Gorilla: Large Language Model Connected with Massive APIs', authors: 'Patil et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2305.15334' },
-          { title: 'ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs', authors: 'Qin et al.', venue: 'ICLR 2024 Spotlight', url: 'https://arxiv.org/abs/2307.16789' },
-          { title: 'API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs', authors: 'Li et al.', venue: 'EMNLP 2023', url: 'https://arxiv.org/abs/2304.08244' },
+          { title: 'ART: Automatic Multi-step Reasoning and Tool-use', authors: 'Paranjape et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2303.09014' },
+          { title: 'Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models', authors: 'Lu et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2304.09842' },
           { title: 'TaskMatrix.AI: Completing Tasks by Connecting Foundation Models with Millions of APIs', authors: 'Liang et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2303.16434' },
+          { title: 'LLM Agents Making Agent Tools (ToolMaker)', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.11705' },
+          { title: 'AutoTool: Efficient Tool Selection for Large Language Model Agents', authors: 'Jia et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.14650' },
         ],
       },
       {
@@ -93,7 +96,8 @@ export const readingList = [
           { title: 'ScaleMCP: Dynamic and Auto-Synchronizing MCP Tools for LLM Agents', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2505.06416' },
           { title: 'RAG-MCP: Mitigating Prompt Bloat in LLM Tool Selection via Retrieval-Augmented Generation', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2505.03275' },
           { title: 'MCP-Zero: Active Tool Discovery for Autonomous LLM Agents', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2506.01056' },
-          { title: 'MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.20453' },
+          { title: 'MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.20453' },
+          { title: 'Help or Hurdle? Rethinking MCP-Augmented Large Language Models', authors: 'Song et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.12566' },
         ],
       },
     ],
@@ -102,34 +106,34 @@ export const readingList = [
     topic: 'Memory & RAG',
     subtopics: [
       {
-        name: 'RAG Foundations',
-        papers: [
-          { title: 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks', authors: 'Lewis et al.', venue: 'NeurIPS 2020', url: 'https://arxiv.org/abs/2005.11401' },
-          { title: 'REALM: Retrieval-Augmented Language Model Pre-Training', authors: 'Guu et al.', venue: 'ICML 2020', url: 'https://arxiv.org/abs/2002.08909' },
-          { title: 'Dense Passage Retrieval for Open-Domain Question Answering', authors: 'Karpukhin et al.', venue: 'EMNLP 2020', url: 'https://arxiv.org/abs/2004.04906' },
-          { title: 'REPLUG: Retrieval-Augmented Black-Box Language Models', authors: 'Shi et al.', venue: 'NAACL 2024', url: 'https://arxiv.org/abs/2301.12652' },
-          { title: 'Adaptive-RAG: Learning to Adapt Retrieval-Augmented LLMs through Question Complexity', authors: 'Jeong et al.', venue: 'NAACL 2024', url: 'https://arxiv.org/abs/2403.14403' },
-        ],
-      },
-      {
-        name: 'Agent Memory Architectures',
+        name: 'Working Memory',
         papers: [
           { title: 'MemGPT: Towards LLMs as Operating Systems', authors: 'Packer et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2310.08560' },
           { title: 'Cognitive Architectures for Language Agents (CoALA)', authors: 'Sumers et al.', venue: 'TMLR 2024', url: 'https://arxiv.org/abs/2309.02427' },
           { title: 'A Survey on the Memory Mechanism of Large Language Model based Agents', authors: 'Zhang et al.', venue: 'ACM TOIS 2025', url: 'https://arxiv.org/abs/2404.13501' },
-          { title: 'HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models', authors: 'Gutierrez et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2405.14831' },
-          { title: 'A-MEM: Agentic Memory for LLM Agents', authors: 'Xu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.12110' },
-          { title: 'Memory in the Age of AI Agents: A Survey', authors: 'Hu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.13564' },
+          { title: 'Agentic Memory: Unified Long-Term and Short-Term Memory Management for LLM Agents', authors: 'Various', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2601.01885' },
+          { title: 'Memory-R1: Enhancing LLM Agents to Manage and Utilize Memories via Reinforcement Learning', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.19828' },
         ],
       },
       {
-        name: 'Advanced & Agentic RAG',
+        name: 'Long-term Memory',
+        papers: [
+          { title: 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks', authors: 'Lewis et al.', venue: 'NeurIPS 2020', url: 'https://arxiv.org/abs/2005.11401' },
+          { title: 'HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models', authors: 'Gutierrez et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2405.14831' },
+          { title: 'A-MEM: Agentic Memory for LLM Agents', authors: 'Xu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.12110' },
+          { title: 'Memory in the Age of AI Agents: A Survey', authors: 'Hu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.13564' },
+          { title: 'Position: Episodic Memory is the Missing Piece for Long-Term LLM Agents', authors: 'Pink et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2502.06975' },
+          { title: 'Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory', authors: 'Chhikara et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2504.19413' },
+        ],
+      },
+      {
+        name: 'Agentic RAG',
         papers: [
           { title: 'Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection', authors: 'Asai et al.', venue: 'ICLR 2024 Oral', url: 'https://arxiv.org/abs/2310.11511' },
           { title: 'Corrective Retrieval Augmented Generation (CRAG)', authors: 'Yan et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2401.15884' },
           { title: 'Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG', authors: 'Singh et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2501.09136' },
-          { title: 'A-RAG: Scaling Agentic RAG via Hierarchical Retrieval Interfaces', authors: 'Various', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.03442' },
-          { title: 'GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in RAG', authors: 'Various', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2603.01783' },
+          { title: 'Search-R1: Training LLMs to Reason and Leverage Search Engines with RL', authors: 'Jin et al.', venue: 'COLM 2025', url: 'https://arxiv.org/abs/2503.09516' },
+          { title: 'RAG-RL: Advancing Retrieval-Augmented Generation via RL and Curriculum Learning', authors: 'Huang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2503.12759' },
         ],
       },
     ],
@@ -138,7 +142,7 @@ export const readingList = [
     topic: 'Multi-Agent Systems',
     subtopics: [
       {
-        name: 'Multi-Agent Frameworks',
+        name: 'Coordination & Frameworks',
         papers: [
           { title: 'AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation', authors: 'Wu et al.', venue: 'ICOLM 2024', url: 'https://arxiv.org/abs/2308.08155' },
           { title: 'MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework', authors: 'Hong et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2308.00352' },
@@ -146,6 +150,7 @@ export const readingList = [
           { title: 'AgentVerse: Facilitating Multi-Agent Collaboration', authors: 'Chen et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2308.10848' },
           { title: 'CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society', authors: 'Li et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2303.17760' },
           { title: 'Scaling Large Language Model-based Multi-Agent Collaboration', authors: 'Qian et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2406.07155' },
+          { title: 'Multi-Agent Collaboration via Evolving Orchestration', authors: 'Dang et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2505.19591' },
         ],
       },
       {
@@ -155,14 +160,16 @@ export const readingList = [
           { title: 'Encouraging Divergent Thinking in LLMs through Multi-Agent Debate', authors: 'Liang et al.', venue: 'EMNLP 2024', url: 'https://arxiv.org/abs/2305.19118' },
           { title: 'Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains', authors: 'Subramaniam et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2501.05707' },
           { title: 'Multi-Agent Collaboration Mechanisms: A Survey of LLMs', authors: 'Tran et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2501.06322' },
+          { title: 'Thought Communication in Multiagent Collaboration', authors: 'Zheng et al.', venue: 'NeurIPS 2025 Spotlight', url: 'https://arxiv.org/abs/2510.20733' },
         ],
       },
       {
-        name: 'Emergent Social Dynamics',
+        name: 'Emergent Behavior',
         papers: [
           { title: 'Exploring Collaboration Mechanisms for LLM Agents: A Social Psychology View', authors: 'Zhang et al.', venue: 'ACL 2024', url: 'https://arxiv.org/abs/2310.02124' },
           { title: 'Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents', authors: 'Piatti et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2404.16698' },
           { title: 'Towards a Science of Scaling Agent Systems', authors: 'Kim et al.', venue: 'arXiv 2025 (Google Research)', url: 'https://arxiv.org/abs/2512.08296' },
+          { title: 'CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2510.08529' },
         ],
       },
     ],
@@ -171,7 +178,7 @@ export const readingList = [
     topic: 'Agentic AI Frameworks',
     subtopics: [
       {
-        name: 'Core Frameworks & SDKs',
+        name: 'Development Frameworks',
         papers: [
           { title: 'DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines', authors: 'Khattab et al.', venue: 'ICLR 2024 Spotlight', url: 'https://arxiv.org/abs/2310.03714' },
           { title: 'OpenHands: An Open Platform for AI Software Developers as Generalist Agents', authors: 'Wang et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2407.16741' },
@@ -182,7 +189,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Agent Protocols & Interoperability',
+        name: 'Communication Protocols',
         papers: [
           { title: 'A Survey of AI Agent Protocols', authors: 'Yang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2504.16736' },
           { title: 'A Survey of Agent Interoperability Protocols: MCP, ACP, A2A, and ANP', authors: 'Ehtesham et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2505.02279' },
@@ -191,7 +198,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Production & Deployment',
+        name: 'Production Deployment',
         papers: [
           { title: 'Agentic AI Frameworks: Architectures, Protocols, and Design Challenges', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.10146' },
           { title: 'A Practical Guide for Production-Grade Agentic AI Workflows', authors: 'Bandara et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.08769' },
@@ -200,34 +207,41 @@ export const readingList = [
     ],
   },
   {
-    topic: 'Performance Evaluation',
+    topic: 'Performance Evaluation & Verification',
     subtopics: [
       {
-        name: 'General Agent Benchmarks',
+        name: 'Agent Benchmarks',
         papers: [
           { title: 'AgentBench: Evaluating LLMs as Agents', authors: 'Liu et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2308.03688' },
           { title: 'GAIA: A Benchmark for General AI Assistants', authors: 'Mialon et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2311.12983' },
+          { title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?', authors: 'Jimenez et al.', venue: 'ICLR 2024 Oral', url: 'https://arxiv.org/abs/2310.06770' },
           { title: 'τ-bench: A Benchmark for Tool-Agent-User Interaction', authors: 'Yao et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2406.12045' },
+          { title: 'TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks', authors: 'Xu et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2412.14161' },
           { title: 'AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents', authors: 'Ma et al.', venue: 'NeurIPS 2024 Oral', url: 'https://arxiv.org/abs/2401.13178' },
           { title: 'Gaia2: Benchmarking LLM Agents on Dynamic and Asynchronous Environments', authors: 'Froger et al.', venue: 'ICLR 2026 Oral', url: 'https://arxiv.org/abs/2602.11964' },
+          { title: 'AgentArch: A Comprehensive Benchmark to Evaluate Agent Architectures in Enterprise', authors: 'Bogavelli et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.10769' },
         ],
       },
       {
-        name: 'Domain-Specific Benchmarks',
+        name: 'Verifiability & Reproducibility',
         papers: [
-          { title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?', authors: 'Jimenez et al.', venue: 'ICLR 2024 Oral', url: 'https://arxiv.org/abs/2310.06770' },
-          { title: 'Evaluating Large Language Models Trained on Code (HumanEval)', authors: 'Chen et al.', venue: 'arXiv 2021', url: 'https://arxiv.org/abs/2107.03374' },
-          { title: 'ALFWorld: Aligning Text and Embodied Environments for Interactive Learning', authors: 'Shridhar et al.', venue: 'ICLR 2021', url: 'https://arxiv.org/abs/2010.03768' },
-          { title: 'TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks', authors: 'Xu et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2412.14161' },
-          { title: 'SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.16941' },
-          { title: 'MCP-AgentBench: Evaluating Language Agent Performance with MCP-Mediated Tools', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.09734' },
-        ],
-      },
-      {
-        name: 'Evaluation Methodology',
-        papers: [
-          { title: 'Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena', authors: 'Zheng et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2306.05685' },
           { title: 'AI Agents That Matter', authors: 'Kapoor et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2407.01502' },
+          { title: 'Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena', authors: 'Zheng et al.', venue: 'NeurIPS 2023', url: 'https://arxiv.org/abs/2306.05685' },
+          { title: 'CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark', authors: 'Siegel et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2409.11363' },
+          { title: 'When Does Verification Pay Off? A Closer Look at LLMs as Solution Verifiers', authors: 'Lu et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.02304' },
+          { title: 'Bridging LLM Planning Agents and Formal Methods: A Case Study in Plan Verification', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2510.03469' },
+          { title: 'Reliable Weak-to-Strong Monitoring of LLM Agents', authors: 'Kale et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.19461' },
+        ],
+      },
+      {
+        name: 'AgentOps & Observability',
+        papers: [
+          { title: 'AgentOps: Enabling Observability of LLM Agents', authors: 'Zhu et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2411.05285' },
+          { title: 'A Survey on AgentOps: Categorization, Challenges, and Future Directions', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.02121' },
+          { title: 'Architecting AgentOps Needs CHANGE', authors: 'Biswas et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2601.06456' },
+          { title: 'The 2025 AI Agent Index', authors: 'Staufer et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.17753' },
+          { title: 'AIOS: LLM Agent Operating System', authors: 'Mei et al.', venue: 'COLM 2025', url: 'https://arxiv.org/abs/2403.16971' },
+          { title: 'MI9 -- Agent Intelligence Protocol: Runtime Governance for Agentic AI Systems', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.03858' },
         ],
       },
     ],
@@ -236,23 +250,15 @@ export const readingList = [
     topic: 'Safety & Security',
     subtopics: [
       {
-        name: 'Adversarial Attacks & Prompt Injection',
+        name: 'Adversarial Attacks',
         papers: [
           { title: 'Not What You\'ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection', authors: 'Greshake et al.', venue: 'AISec 2023', url: 'https://arxiv.org/abs/2302.12173' },
           { title: 'AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses', authors: 'Debenedetti et al.', venue: 'NeurIPS 2024 Spotlight', url: 'https://arxiv.org/abs/2406.13352' },
           { title: 'InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents', authors: 'Zhan et al.', venue: 'ACL 2024 Findings', url: 'https://arxiv.org/abs/2403.02691' },
           { title: 'AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases', authors: 'Chen et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2407.12784' },
           { title: 'WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks', authors: 'Evtimov et al.', venue: 'arXiv 2025 (Meta)', url: 'https://arxiv.org/abs/2504.18575' },
-        ],
-      },
-      {
-        name: 'Safety Benchmarks & Evaluation',
-        papers: [
-          { title: 'R-Judge: Benchmarking Safety Risk Awareness for LLM Agents', authors: 'Yuan et al.', venue: 'EMNLP 2024 Findings', url: 'https://arxiv.org/abs/2401.10019' },
-          { title: 'AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents', authors: 'Andriushchenko et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2410.09024' },
-          { title: 'Agent-SafetyBench: Evaluating the Safety of LLM Agents', authors: 'Zhang et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2412.14470' },
-          { title: 'Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents', authors: 'Zhang et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2410.02644' },
-          { title: 'SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents', authors: 'Yin et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2412.13178' },
+          { title: 'The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against LLM Jailbreaks and Prompt Injections', authors: 'Nasr et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2510.09023' },
+          { title: 'ToolHijacker: Prompt Injection Attack to Tool Selection in LLM Agents', authors: 'Shi et al.', venue: 'NDSS 2026', url: 'https://arxiv.org/abs/2504.19793' },
         ],
       },
       {
@@ -261,43 +267,53 @@ export const readingList = [
           { title: 'TrustAgent: Towards Safe and Trustworthy LLM-based Agents', authors: 'Hua et al.', venue: 'EMNLP 2024', url: 'https://arxiv.org/abs/2402.01586' },
           { title: 'Deliberative Alignment: Reasoning Enables Safer Language Models', authors: 'Guan et al.', venue: 'arXiv 2024 (OpenAI)', url: 'https://arxiv.org/abs/2412.16339' },
           { title: 'GuardReasoner: Towards Reasoning-based LLM Safeguards', authors: 'Liu et al.', venue: 'ICLR 2025 Workshop', url: 'https://arxiv.org/abs/2501.18492' },
+          { title: 'R2-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning', authors: 'Kang and Li', venue: 'ICLR 2025 Spotlight', url: 'https://arxiv.org/abs/2407.05557' },
           { title: 'Building a Foundational Guardrail for General Agentic Systems via Synthetic Data', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2510.09781' },
           { title: 'Agentic AI Security: Threats, Defenses, Evaluation, and Open Challenges', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2510.23883' },
-          { title: 'A Safety and Security Framework for Real-World Agentic Systems', authors: 'NVIDIA et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.21990' },
+        ],
+      },
+      {
+        name: 'Governance & Responsible Deployment',
+        papers: [
+          { title: 'Practices for Governing Agentic AI Systems', authors: 'Shavit et al.', venue: 'OpenAI White Paper, 2023', url: 'https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf' },
+          { title: 'Governing AI Agents', authors: 'Kolt, N.', venue: 'Notre Dame Law Review, 2025', url: 'https://arxiv.org/abs/2501.07913' },
+          { title: 'On the Regulatory Potential of User Interfaces for AI Agent Governance', authors: 'Feng et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.00742' },
+          { title: 'Governance-as-a-Service: A Multi-Agent Framework for AI System Compliance', authors: 'Pervez et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.18765' },
           { title: 'Security Threat Modeling for Emerging AI-Agent Protocols: MCP, A2A, Agora, and ANP', authors: 'Anbiaee et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.11327' },
         ],
       },
     ],
   },
   {
-    topic: 'AgentOps & Infrastructure',
+    topic: 'Efficiency & Systems Optimization',
     subtopics: [
       {
-        name: 'LLM Serving & Optimization',
+        name: 'LLM Serving & Inference',
         papers: [
           { title: 'Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM)', authors: 'Kwon et al.', venue: 'ACM SOSP 2023', url: 'https://arxiv.org/abs/2309.06180' },
           { title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness', authors: 'Dao et al.', venue: 'NeurIPS 2022', url: 'https://arxiv.org/abs/2205.14135' },
           { title: 'Fast Inference from Transformers via Speculative Decoding', authors: 'Leviathan et al.', venue: 'ICML 2023', url: 'https://arxiv.org/abs/2211.17192' },
           { title: 'SGLang: Efficient Execution of Structured Language Model Programs', authors: 'Zheng et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2312.07104' },
           { title: 'DistServe: Disaggregating Prefill and Decoding for Goodput-optimized LLM Serving', authors: 'Zhong et al.', venue: 'OSDI 2024', url: 'https://arxiv.org/abs/2401.09670' },
+          { title: 'FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving', authors: 'Ye et al.', venue: 'MLSys 2025 Best Paper', url: 'https://arxiv.org/abs/2501.01005' },
+          { title: 'Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving', authors: 'Qin et al.', venue: 'FAST 2025 Best Paper', url: 'https://arxiv.org/abs/2407.00079' },
         ],
       },
       {
-        name: 'Observability & Operations',
+        name: 'Agent Runtime & Scaling',
         papers: [
-          { title: 'AgentOps: Enabling Observability of LLM Agents', authors: 'Zhu et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2411.05285' },
-          { title: 'A Survey on AgentOps: Categorization, Challenges, and Future Directions', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.02121' },
-          { title: 'Architecting AgentOps Needs CHANGE', authors: 'Biswas et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2601.06456' },
-          { title: 'The 2025 AI Agent Index', authors: 'Staufer et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.17753' },
-          { title: 'AIOS: LLM Agent Operating System', authors: 'Mei et al.', venue: 'COLM 2025', url: 'https://arxiv.org/abs/2403.16971' },
+          { title: 'HALO: Hierarchical Autonomous Logic-Oriented Orchestration for Multi-Agent LLM Systems', authors: 'Hou et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2505.13516' },
+          { title: 'Towards Efficient Agents: A Co-Design of Inference Architecture and System (AgentInfer)', authors: 'Lin et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.18337' },
           { title: 'A Practical Guide for Production-Grade Agentic AI Workflows', authors: 'Bandara et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.08769' },
         ],
       },
       {
-        name: 'Governance & Policy',
+        name: 'Cost & Latency Optimization',
         papers: [
-          { title: 'Practices for Governing Agentic AI Systems', authors: 'Shavit et al.', venue: 'OpenAI White Paper, 2023', url: 'https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf' },
-          { title: 'Governing AI Agents', authors: 'Kolt, N.', venue: 'Notre Dame Law Review, 2025', url: 'https://arxiv.org/abs/2501.07913' },
+          { title: 'Agentic Plan Caching: Test-Time Memory for Fast and Cost-Efficient LLM Agents', authors: 'Zhang et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2506.14852' },
+          { title: 'AgentDiet: Improving Efficiency of LLM Agent Systems through Trajectory Reduction', authors: 'Xiao et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.23586' },
+          { title: 'The Cost of Dynamic Reasoning: AI Agents and Test-Time Scaling from an Infrastructure Perspective', authors: 'Kim et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2506.04301' },
+          { title: 'Efficient Agents: Building Effective Agents While Reducing Cost', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.02694' },
         ],
       },
     ],
@@ -306,7 +322,7 @@ export const readingList = [
     topic: 'Code-Generation Agents',
     subtopics: [
       {
-        name: 'Code LLMs & Foundations',
+        name: 'Code LLMs',
         papers: [
           { title: 'Evaluating Large Language Models Trained on Code (Codex)', authors: 'Chen et al.', venue: 'arXiv 2021', url: 'https://arxiv.org/abs/2107.03374' },
           { title: 'Competition-Level Code Generation with AlphaCode', authors: 'Li et al.', venue: 'Science 2022', url: 'https://arxiv.org/abs/2203.07814' },
@@ -315,7 +331,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Software Engineering Agents',
+        name: 'SE Agents',
         papers: [
           { title: 'SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering', authors: 'Yang et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2405.15793' },
           { title: 'Executable Code Actions Elicit Better LLM Agents (CodeAct)', authors: 'Wang et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2402.01030' },
@@ -325,7 +341,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Benchmarks & Evolution',
+        name: 'Benchmarks & Evaluation',
         papers: [
           { title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?', authors: 'Jimenez et al.', venue: 'ICLR 2024 Oral', url: 'https://arxiv.org/abs/2310.06770' },
           { title: 'SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2509.16941' },
@@ -340,7 +356,7 @@ export const readingList = [
     topic: 'Desktop & Web Agents',
     subtopics: [
       {
-        name: 'Web Agent Environments',
+        name: 'Web Navigation',
         papers: [
           { title: 'WebArena: A Realistic Web Environment for Building Autonomous Agents', authors: 'Zhou et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2307.13854' },
           { title: 'VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks', authors: 'Koh et al.', venue: 'ACL 2024', url: 'https://arxiv.org/abs/2401.13649' },
@@ -350,7 +366,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'GUI Understanding & Grounding',
+        name: 'GUI Grounding',
         papers: [
           { title: 'CogAgent: A Visual Language Model for GUI Agents', authors: 'Hong et al.', venue: 'CVPR 2024', url: 'https://arxiv.org/abs/2312.08914' },
           { title: 'Set-of-Mark Prompting Unleashes Extraordinary Visual Grounding in GPT-4V', authors: 'Yang et al.', venue: 'arXiv 2023', url: 'https://arxiv.org/abs/2310.11441' },
@@ -360,7 +376,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Agent Training & Evaluation',
+        name: 'Desktop Automation',
         papers: [
           { title: 'OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments', authors: 'Xie et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2404.07972' },
           { title: 'TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks', authors: 'Xu et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2412.14161' },
@@ -375,7 +391,7 @@ export const readingList = [
     topic: 'Embodied Agents',
     subtopics: [
       {
-        name: 'Language-Guided Robotics',
+        name: 'Language-Guided Control',
         papers: [
           { title: 'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (SayCan)', authors: 'Ahn et al.', venue: 'CoRL 2022', url: 'https://arxiv.org/abs/2204.01691' },
           { title: 'Inner Monologue: Embodied Reasoning through Planning with Language Models', authors: 'Huang et al.', venue: 'CoRL 2022', url: 'https://arxiv.org/abs/2207.05608' },
@@ -396,7 +412,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Generalist Robot Policies',
+        name: 'Generalist Policies',
         papers: [
           { title: 'Open X-Embodiment: Robotic Learning Datasets and RT-X Models', authors: 'Open X-Embodiment Collaboration', venue: 'ICRA 2024', url: 'https://arxiv.org/abs/2310.08864' },
           { title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion', authors: 'Chi et al.', venue: 'RSS 2023', url: 'https://arxiv.org/abs/2303.04137' },
@@ -420,7 +436,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Social Intelligence Evaluation',
+        name: 'Social Intelligence',
         papers: [
           { title: 'SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents', authors: 'Zhou et al.', venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2310.11667' },
           { title: 'SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents', authors: 'Wang et al.', venue: 'ACL 2024', url: 'https://arxiv.org/abs/2403.08715' },
@@ -430,7 +446,7 @@ export const readingList = [
         ],
       },
       {
-        name: 'Persona & Empathy Design',
+        name: 'Persona & Theory of Mind',
         papers: [
           { title: 'Towards Empathetic Open-domain Conversation Models: A New Benchmark and Dataset', authors: 'Rashkin et al.', venue: 'ACL 2019', url: 'https://arxiv.org/abs/1811.00207' },
           { title: 'Theory of Mind Might Have Spontaneously Emerged in Large Language Models', authors: 'Kosinski', venue: 'PNAS 2024', url: 'https://arxiv.org/abs/2302.02083' },
