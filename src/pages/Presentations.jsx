@@ -7,7 +7,7 @@ export default function Presentations() {
   const [activeTab, setActiveTab] = useState(0)
   const [loading, setLoading] = useState(true)
 
-  const weeks = curriculum.filter(w => w.readingIdx != null)
+  const weeks = curriculum.filter(w => w.readingIdx != null && w.week !== 'W1')
 
   const fetchAssignments = async () => {
     try {
@@ -56,7 +56,7 @@ export default function Presentations() {
 
   const currentWeek = weeks[activeTab]
   const currentReadings = readingList[currentWeek.readingIdx]
-  const totalSlots = readingList.reduce((sum, t) => sum + t.subtopics.length, 0)
+  const totalSlots = weeks.reduce((sum, w) => sum + readingList[w.readingIdx].subtopics.length, 0)
 
   return (
     <div className="pres-page">
