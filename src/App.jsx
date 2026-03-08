@@ -9,6 +9,7 @@ import Logistics from './components/Logistics'
 import Schedule from './components/Schedule'
 import Footer from './components/Footer'
 import ProjectIdeas from './pages/Teams'
+import Presentations from './pages/Presentations'
 
 function Home() {
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ideas" element={<ProjectIdeas />} />
+        <Route path="/presentations" element={<Presentations />} />
       </Routes>
     </BrowserRouter>
   )

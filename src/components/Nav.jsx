@@ -29,6 +29,7 @@ export default function Nav() {
             </a>
           ))}
           <a href="/ideas" onClick={() => setOpen(false)}>Project Ideas</a>
+          <a href="/presentations" onClick={() => setOpen(false)}>Presentations</a>
         </div>
         <button className="nav-mobile-toggle" aria-label="Menu" onClick={() => setOpen(!open)}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
