@@ -38,6 +38,13 @@ export default async function handler(req, res) {
     return res.status(201).json(result[0])
   }
 
-  res.setHeader('Allow', 'GET, POST')
+  if (req.method === 'DELETE') {
+    const { id } = req.query
+    if (!id) return res.status(400).json({ error: 'Missing id' })
+    await sql`DELETE FROM presentations WHERE id = ${id}`
+    return res.status(200).json({ ok: true })
+  }
+
+  res.setHeader('Allow', 'GET, POST, DELETE')
   res.status(405).json({ error: 'Method not allowed' })
 }

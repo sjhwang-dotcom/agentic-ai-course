@@ -49,7 +49,7 @@ export default function Presentations() {
   const handleRemove = async (id) => {
     if (!confirm('Remove this assignment?')) return
     try {
-      const res = await fetch(`/api/presentations/${id}`, { method: 'DELETE' })
+      const res = await fetch(`/api/presentations?id=${id}`, { method: 'DELETE' })
       if (res.ok) fetchAssignments()
     } catch (err) {
       console.error('Failed to remove:', err)
