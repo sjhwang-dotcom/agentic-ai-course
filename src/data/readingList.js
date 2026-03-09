@@ -28,6 +28,8 @@ export const readingList = [
           { title: 'Towards a Science of Scaling Agent Systems', authors: 'Kim et al.', venue: 'arXiv 2025 (Google Research)', url: 'https://arxiv.org/abs/2512.08296' },
           { title: 'Generative to Agentic AI: Survey, Conceptualization, and Challenges', authors: 'Schneider', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2504.18875' },
           { title: 'A Comprehensive Survey of Self-Evolving AI Agents', authors: 'Fang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.07407' },
+          { title: 'Agents Are Not Enough', authors: 'Shah & White', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2412.16241' },
+          { title: 'Agent AI: Surveying the Horizons of Multimodal Interaction', authors: 'Durante et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2401.03568' },
         ],
       },
     ],
@@ -190,6 +192,7 @@ export const readingList = [
           { title: 'Exploration of LLM Multi-Agent Application Based on LangGraph+CrewAI', authors: 'Duan et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2411.18241' },
           { title: 'The OpenHands Software Agent SDK', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.03690' },
           { title: 'The Auton Agentic AI Framework', authors: 'Cao et al.', venue: 'arXiv 2026', url: 'https://arxiv.org/abs/2602.23720' },
+          { title: 'Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs', authors: 'Cheng et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2406.16218' },
         ],
       },
       {
@@ -206,6 +209,9 @@ export const readingList = [
         papers: [
           { title: 'Agentic AI Frameworks: Architectures, Protocols, and Design Challenges', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2508.10146' },
           { title: 'A Practical Guide for Production-Grade Agentic AI Workflows', authors: 'Bandara et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2512.08769' },
+          { title: 'Are More LLM Calls All You Need? Towards the Scaling Properties of Compound AI Systems', authors: 'Chen et al.', venue: 'NeurIPS 2024', url: 'https://arxiv.org/abs/2403.02419' },
+          { title: 'Measuring Agents in Production', authors: 'Pan et al.', venue: 'arXiv 2024 (UC Berkeley)', url: 'https://arxiv.org/abs/2512.04123' },
+          { title: 'Deploying Foundation Model Powered Agent Services: A Survey', authors: 'Xu et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2412.13437' },
         ],
       },
     ],
@@ -377,6 +383,8 @@ export const readingList = [
           { title: 'Competition-Level Code Generation with AlphaCode', authors: 'Li et al.', venue: 'Science 2022', url: 'https://arxiv.org/abs/2203.07814' },
           { title: 'StarCoder: May the Source Be With You!', authors: 'Li et al.', venue: 'TMLR 2023', url: 'https://arxiv.org/abs/2305.06161' },
           { title: 'CodeGen: An Open Large Language Model for Code with Multi-Turn Program Synthesis', authors: 'Nijkamp et al.', venue: 'ICLR 2023', url: 'https://arxiv.org/abs/2203.13474' },
+          { title: 'Code Llama: Open Foundation Models for Code', authors: 'Roziere et al.', venue: 'arXiv 2023 (Meta)', url: 'https://arxiv.org/abs/2308.12950' },
+          { title: 'DeepSeek-Coder: When the Large Language Model Meets Programming', authors: 'Guo et al.', venue: 'arXiv 2024 (DeepSeek)', url: 'https://arxiv.org/abs/2401.14196' },
         ],
       },
       {
@@ -387,6 +395,7 @@ export const readingList = [
           { title: 'OpenHands: An Open Platform for AI Software Developers as Generalist Agents', authors: 'Wang et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2407.16741' },
           { title: 'The OpenHands Software Agent SDK', authors: 'Wang et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.03690' },
           { title: 'Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?', authors: 'Various', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2511.13646' },
+          { title: 'Agentless: Demystifying LLM-based Software Engineering Agents', authors: 'Xia et al.', venue: 'FSE 2025', url: 'https://arxiv.org/abs/2407.01489' },
         ],
       },
       {
@@ -412,6 +421,7 @@ export const readingList = [
           { title: 'MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL', authors: 'Wang et al.', venue: 'Findings of ACL 2024', url: 'https://arxiv.org/abs/2312.11242' },
           { title: 'CHESS: Contextual Harnessing for Efficient SQL Synthesis', authors: 'Talaei et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2405.16755' },
           { title: 'Spider 2.0: Evaluating Language Models on Real-World Enterprise Text-to-SQL Workflows', authors: 'Lei et al.', venue: 'ICLR 2025', url: 'https://arxiv.org/abs/2411.07763' },
+          { title: 'Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs (BIRD)', authors: 'Li et al.', venue: 'NeurIPS 2023 Spotlight', url: 'https://arxiv.org/abs/2305.03111' },
         ],
       },
       {
@@ -421,6 +431,7 @@ export const readingList = [
           { title: 'WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?', authors: 'Drouin et al.', venue: 'ICML 2024', url: 'https://arxiv.org/abs/2403.07718' },
           { title: 'TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks', authors: 'Xu et al.', venue: 'NeurIPS 2025', url: 'https://arxiv.org/abs/2412.14161' },
           { title: 'Tau-Bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains', authors: 'Yao et al.', venue: 'arXiv 2024', url: 'https://arxiv.org/abs/2406.12045' },
+          { title: 'Data-Copilot: Bridging Billions of Data and Humans with Autonomous Workflow', authors: 'Zhang et al.', venue: 'ICLR 2024 LLMAgents Workshop', url: 'https://arxiv.org/abs/2306.07209' },
         ],
       },
       {
@@ -430,6 +441,7 @@ export const readingList = [
           { title: 'CRAG -- Comprehensive RAG Benchmark', authors: 'Yang et al.', venue: 'arXiv 2024 (Meta)', url: 'https://arxiv.org/abs/2406.04744' },
           { title: 'Agentic RAG: Boosting LLM Reasoning and Autonomy through Intelligent Retrieval', authors: 'Singh et al.', venue: 'arXiv 2025', url: 'https://arxiv.org/abs/2501.09136' },
           { title: 'A Survey on RAG Meets LLMs: Towards Retrieval-Augmented Large Language Models', authors: 'Fan et al.', venue: 'KDD 2024', url: 'https://arxiv.org/abs/2405.06211' },
+          { title: 'From Local to Global: A Graph RAG Approach to Query-Focused Summarization (GraphRAG)', authors: 'Edge et al.', venue: 'EMNLP 2024 (Microsoft)', url: 'https://arxiv.org/abs/2404.16130' },
         ],
       },
     ],

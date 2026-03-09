@@ -20,14 +20,14 @@ export default async function handler(req, res) {
       SELECT id FROM presentations WHERE student_name = ${student_name.trim()}
     `
     if (existing.length > 0) {
-      return res.status(409).json({ error: '이미 다른 서브토픽에 신청했습니다.' })
+      return res.status(409).json({ error: 'You have already signed up for another subtopic.' })
     }
 
     const slot = await sql`
       SELECT id FROM presentations WHERE topic_idx = ${topic_idx} AND subtopic_idx = ${subtopic_idx}
     `
     if (slot.length > 0) {
-      return res.status(409).json({ error: '이 서브토픽은 이미 배정되었습니다.' })
+      return res.status(409).json({ error: 'This subtopic has already been assigned.' })
     }
 
     const result = await sql`

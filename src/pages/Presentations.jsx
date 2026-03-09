@@ -26,7 +26,7 @@ export default function Presentations() {
     assignments.find(a => a.topic_idx === topicIdx && a.subtopic_idx === subtopicIdx)
 
   const handleSignUp = async (week, topicIdx, subtopicIdx) => {
-    const name = prompt('이름을 입력하세요 (Enter your name):')
+    const name = prompt('Enter your name:')
     if (!name || !name.trim()) return
     try {
       const res = await fetch('/api/presentations', {
@@ -45,7 +45,7 @@ export default function Presentations() {
   }
 
   const handleRemove = async (id) => {
-    if (!confirm('이 배정을 제거하시겠습니까?')) return
+    if (!confirm('Remove this assignment?')) return
     try {
       const res = await fetch(`/api/presentations/${id}`, { method: 'DELETE' })
       if (res.ok) fetchAssignments()
