@@ -29,6 +29,7 @@ export default function Presentations() {
   const handleSignUp = async (week, topicIdx, subtopicIdx) => {
     const name = prompt('Enter your name:')
     if (!name || !name.trim()) return
+    if (!confirm(`⚠️ You can only present ONE subtopic per semester.\n\nOnce confirmed, you cannot sign up for another subtopic.\nAre you sure you want to sign up as "${name.trim()}"?`)) return
     try {
       const res = await fetch('/api/presentations', {
         method: 'POST',

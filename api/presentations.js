@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       SELECT id FROM presentations WHERE student_name = ${student_name.trim()}
     `
     if (existing.length > 0) {
-      return res.status(409).json({ error: 'You have already signed up for another subtopic.' })
+      return res.status(409).json({ error: 'Each student can only present one subtopic. Please remove your current assignment first.' })
     }
 
     const slot = await sql`
