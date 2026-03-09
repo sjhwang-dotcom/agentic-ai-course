@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { curriculum } from '../data/curriculum'
 import { readingList } from '../data/readingList'
+import { presentationPapers } from '../data/presentationPapers'
 
 export default function Presentations() {
   const [assignments, setAssignments] = useState([])
@@ -55,8 +56,8 @@ export default function Presentations() {
   }
 
   const currentWeek = weeks[activeTab]
-  const currentReadings = readingList[currentWeek.readingIdx]
-  const totalSlots = weeks.reduce((sum, w) => sum + readingList[w.readingIdx].subtopics.length, 0)
+  const currentReadings = presentationPapers[currentWeek.readingIdx]
+  const totalSlots = weeks.reduce((sum, w) => sum + presentationPapers[w.readingIdx].subtopics.length, 0)
 
   return (
     <div className="pres-page">
@@ -73,7 +74,7 @@ export default function Presentations() {
         <div className="pres-tabs">
           {weeks.map((w, idx) => {
             const topicIdx = w.readingIdx
-            const subtopicCount = readingList[topicIdx].subtopics.length
+            const subtopicCount = presentationPapers[topicIdx].subtopics.length
             const assigned = assignments.filter(a => a.topic_idx === topicIdx).length
             return (
               <button
