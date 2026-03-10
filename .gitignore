@@ -8,3 +8,8 @@ dist
 papers_topic_9_to_13.md
 index.html.bak
 .vercel
+.env*.local
+slides/papers/
+slides/figures/cropped/
+slides/figures/*.png
+slides/generate_w2.js
