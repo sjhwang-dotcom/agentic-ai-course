@@ -185,7 +185,10 @@ img { max-width: 100%; display: block; }
 
 .idea-card-interested { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding-bottom: 12px; }
 .idea-card-interested-label { font-size: 11px; font-weight: 600; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em; }
-.idea-card-interested-name { padding: 2px 8px; background: #EFF6FF; border-radius: 4px; font-size: 12px; font-weight: 500; color: #3B82F6; }
+.idea-card-interested-name { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; background: #EFF6FF; border-radius: 4px; font-size: 12px; font-weight: 500; color: #3B82F6; }
+.idea-btn-remove-interest { background: none; border: none; cursor: pointer; color: #94A3B8; font-size: 14px; font-weight: 700; line-height: 1; padding: 0 2px; transition: color 0.2s; }
+.idea-btn-remove-interest:hover { color: #EF4444; }
+.idea-btn-interest:disabled { opacity: 0.5; cursor: not-allowed; background: #F1F5F9; }
 
 .idea-card-actions { display: flex; gap: 8px; }
 .idea-btn-interest { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 500; color: #64748B; cursor: pointer; transition: all 0.2s; flex: 1; justify-content: center; }
