@@ -124,21 +124,37 @@ export default function ProjectIdeas() {
                   {new Date(item.created_at).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })}
                 </span>
               </div>
-              {item.interested && item.interested.length > 0 && (
-                <div className="idea-card-interested">
-                  <span className="idea-card-interested-label">지원자</span>
-                  {item.interested.map((m) => (
-                    <span className="idea-card-interested-name" key={m.id}>
-                      {m.name}
-                      <button
-                        className="idea-btn-remove-interest"
-                        onClick={() => handleRemoveInterest(item.id, m.id, item.author)}
-                        title="지원자 삭제"
-                      >×</button>
-                    </span>
-                  ))}
+              <div className="idea-card-interested">
+                <div className="idea-card-interested-header">
+                  <span className="idea-card-interested-label">
+                    Team Members
+                  </span>
+                  <span className="idea-card-interested-count">
+                    {item.interested?.length || 0}/3
+                  </span>
                 </div>
-              )}
+                {item.interested && item.interested.length > 0 ? (
+                  <div className="idea-card-interested-list">
+                    {item.interested.map((m) => (
+                      <div className="idea-card-member" key={m.id}>
+                        <span className="idea-card-member-avatar">
+                          {m.name[0]}
+                        </span>
+                        <span className="idea-card-member-name">{m.name}</span>
+                        <button
+                          className="idea-btn-remove-interest"
+                          onClick={() => handleRemoveInterest(item.id, m.id, item.author)}
+                          title="지원자 삭제"
+                        >×</button>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="idea-card-no-interest">
+                    No one yet — be the first to join!
+                  </div>
+                )}
+              </div>
               <div className="idea-card-actions">
                 <button
                   className="idea-btn-interest"
