@@ -1,21 +1,40 @@
 import { getDb } from './_db.js'
 
+function getClientIp(req) {
+  return req.headers['x-forwarded-for']?.split(',')[0]?.trim()
+    || req.headers['x-real-ip']
+    || req.socket?.remoteAddress
+    || 'unknown'
+}
+
 export default async function handler(req, res) {
   const sql = getDb()
   const { id, action, interestId } = req.query
+  const clientIp = getClientIp(req)
 
   // GET /api/ideas — list all ideas with interested members
   if (req.method === 'GET') {
     const ideas = await sql`
-      SELECT i.*, COALESCE(json_agg(
-        json_build_object('id', t.id, 'name', t.name)
-      ) FILTER (WHERE t.id IS NOT NULL), '[]') AS interested
+      SELECT i.id, i.author, i.title, i.idea, i.created_at, i.creator_ip,
+        COALESCE(json_agg(
+          json_build_object('id', t.id, 'name', t.name)
+        ) FILTER (WHERE t.id IS NOT NULL), '[]') AS interested
       FROM ideas i
       LEFT JOIN interests t ON t.idea_id = i.id
       GROUP BY i.id
       ORDER BY i.created_at DESC
     `
-    return res.status(200).json(ideas)
+    // Add is_owner flag based on IP match, then strip IP from response
+    const result = ideas.map(idea => ({
+      id: idea.id,
+      author: idea.author,
+      title: idea.title,
+      idea: idea.idea,
+      created_at: idea.created_at,
+      interested: idea.interested,
+      is_owner: idea.creator_ip === clientIp,
+    }))
+    return res.status(200).json(result)
   }
 
   // POST /api/ideas — create new idea
@@ -47,18 +66,29 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'author and idea are required' })
     }
     const result = await sql`
-      INSERT INTO ideas (author, title, idea) VALUES (${author}, ${title || ''}, ${idea})
+      INSERT INTO ideas (author, title, idea, creator_ip)
+      VALUES (${author}, ${title || ''}, ${idea}, ${clientIp})
       RETURNING *
     `
     return res.status(201).json(result[0])
   }
 
-  // DELETE /api/ideas?id=X — delete idea
-  // DELETE /api/ideas?id=X&action=interest&interestId=Y — remove interest
+  // DELETE /api/ideas?id=X — delete idea (only by creator IP)
+  // DELETE /api/ideas?id=X&action=interest&interestId=Y — remove interest (only by idea creator IP)
   if (req.method === 'DELETE') {
     if (!id) {
       return res.status(400).json({ error: 'id is required' })
     }
+
+    // Check ownership
+    const idea = await sql`SELECT creator_ip FROM ideas WHERE id = ${id}`
+    if (idea.length === 0) {
+      return res.status(404).json({ error: 'Project not found.' })
+    }
+    if (idea[0].creator_ip !== clientIp) {
+      return res.status(403).json({ error: 'Only the project creator can perform this action.' })
+    }
+
     if (action === 'interest' && interestId) {
       await sql`DELETE FROM interests WHERE id = ${interestId} AND idea_id = ${id}`
       return res.status(200).json({ ok: true })

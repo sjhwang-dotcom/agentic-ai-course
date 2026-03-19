@@ -147,11 +147,13 @@ export default function ProjectIdeas() {
                           {m.name[0]}
                         </span>
                         <span className="idea-card-member-name">{m.name}</span>
-                        <button
-                          className="idea-btn-remove-interest"
-                          onClick={() => handleRemoveInterest(item.id, m.id, item.author)}
-                          title="Remove member"
-                        >×</button>
+                        {item.is_owner && (
+                          <button
+                            className="idea-btn-remove-interest"
+                            onClick={() => handleRemoveInterest(item.id, m.id, item.author)}
+                            title="Remove member"
+                          >×</button>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -170,9 +172,11 @@ export default function ProjectIdeas() {
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 3c-2-2-5.5-.5-5.5 2.5C2.5 9 8 13 8 13s5.5-4 5.5-7.5C13.5 2.5 10 1 8 3z"/></svg>
                   {item.interested && item.interested.length >= 3 ? 'Closed (3/3)' : `Join (${item.interested ? item.interested.length : 0}/3)`}
                 </button>
-                <button className="idea-btn-delete" onClick={() => handleDelete(item.id)} title="Delete">
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 4h12M5.33 4V2.67a1.33 1.33 0 011.34-1.34h2.66a1.33 1.33 0 011.34 1.34V4M12.67 4v9.33a1.33 1.33 0 01-1.34 1.34H4.67a1.33 1.33 0 01-1.34-1.34V4"/></svg>
-                </button>
+                {item.is_owner && (
+                  <button className="idea-btn-delete" onClick={() => handleDelete(item.id)} title="Delete">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 4h12M5.33 4V2.67a1.33 1.33 0 011.34-1.34h2.66a1.33 1.33 0 011.34 1.34V4M12.67 4v9.33a1.33 1.33 0 01-1.34 1.34H4.67a1.33 1.33 0 01-1.34-1.34V4"/></svg>
+                  </button>
+                )}
               </div>
             </div>
           ))}

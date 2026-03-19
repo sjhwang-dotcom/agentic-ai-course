@@ -27,6 +27,10 @@ export default async function handler(req, res) {
   `
 
   await sql`
+    ALTER TABLE ideas ADD COLUMN IF NOT EXISTS creator_ip TEXT DEFAULT 'unknown'
+  `
+
+  await sql`
     CREATE TABLE IF NOT EXISTS presentations (
       id SERIAL PRIMARY KEY,
       week TEXT NOT NULL,
