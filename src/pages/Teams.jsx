@@ -7,6 +7,7 @@ export default function ProjectIdeas() {
   const [idea, setIdea] = useState('')
   const [showForm, setShowForm] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [expanded, setExpanded] = useState({})
 
   const fetchIdeas = async () => {
     try {
@@ -46,7 +47,7 @@ export default function ProjectIdeas() {
     const who = prompt('이름을 입력하세요:')
     if (!who || !who.trim()) return
     try {
-      const res = await fetch(`/api/ideas/${ideaId}/interest`, {
+      const res = await fetch(`/api/ideas?id=${ideaId}&action=interest`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: who.trim() }),
@@ -71,7 +72,7 @@ export default function ProjectIdeas() {
     }
     if (!confirm('이 지원자를 삭제하시겠습니까?')) return
     try {
-      const res = await fetch(`/api/ideas/${ideaId}/interest?interestId=${interestId}`, {
+      const res = await fetch(`/api/ideas?id=${ideaId}&action=interest&interestId=${interestId}`, {
         method: 'DELETE',
       })
       if (res.ok) fetchIdeas()
@@ -83,7 +84,7 @@ export default function ProjectIdeas() {
   const handleDelete = async (ideaId) => {
     if (!confirm('정말 삭제하시겠습니까?')) return
     try {
-      const res = await fetch(`/api/ideas/${ideaId}`, { method: 'DELETE' })
+      const res = await fetch(`/api/ideas?id=${ideaId}`, { method: 'DELETE' })
       if (res.ok) fetchIdeas()
     } catch (err) {
       console.error('Failed to delete idea:', err)
@@ -113,7 +114,12 @@ export default function ProjectIdeas() {
             <div className="idea-card" key={item.id}>
               <div className="idea-card-body">
                 <h3 className="idea-card-title">{item.title || '제목 없음'}</h3>
-                <p className="idea-card-desc">{item.idea}</p>
+                <p className={`idea-card-desc${expanded[item.id] ? '' : ' collapsed'}`}>{item.idea}</p>
+                {item.idea && item.idea.length > 200 && (
+                  <button className="idea-card-expand" onClick={() => setExpanded(prev => ({ ...prev, [item.id]: !prev[item.id] }))}>
+                    {expanded[item.id] ? '접기 ▲' : '더 보기 ▼'}
+                  </button>
+                )}
               </div>
               <div className="idea-card-meta">
                 <div className="idea-card-author">

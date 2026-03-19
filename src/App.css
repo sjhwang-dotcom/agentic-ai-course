@@ -176,7 +176,10 @@ img { max-width: 100%; display: block; }
 .idea-card:hover { border-color: #CBD5E1; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
 .idea-card-body { flex: 1; margin-bottom: 16px; }
 .idea-card-title { font-size: 17px; font-weight: 700; color: #0F172A; margin-bottom: 10px; line-height: 1.4; letter-spacing: -0.01em; }
-.idea-card-desc { font-size: 14px; color: #64748B; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.idea-card-desc { font-size: 14px; color: #64748B; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+.idea-card-desc.collapsed { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.idea-card-expand { background: none; border: none; color: #3B82F6; font-size: 13px; font-weight: 600; cursor: pointer; padding: 4px 0; font-family: inherit; }
+.idea-card-expand:hover { text-decoration: underline; }
 
 .idea-card-meta { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-top: 1px solid #F1F5F9; }
 .idea-card-author { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: #475569; }
