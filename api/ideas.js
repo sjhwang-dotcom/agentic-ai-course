@@ -30,13 +30,13 @@ export default async function handler(req, res) {
         SELECT id FROM interests WHERE idea_id = ${id} AND name = ${name}
       `
       if (existing.length > 0) {
-        return res.status(409).json({ error: '이미 지원한 프로젝트입니다.' })
+        return res.status(409).json({ error: 'You have already joined this project.' })
       }
       const count = await sql`
         SELECT COUNT(*)::int AS cnt FROM interests WHERE idea_id = ${id}
       `
       if (count[0].cnt >= 3) {
-        return res.status(400).json({ error: '지원 인원이 마감되었습니다. (최대 3명)' })
+        return res.status(400).json({ error: 'Team is full (max 3 members).' })
       }
       await sql`INSERT INTO interests (idea_id, name) VALUES (${id}, ${name})`
       return res.status(201).json({ ok: true })
