@@ -92,7 +92,7 @@ export const curriculum = [
   {
     week: 'W12',
     date: 'Nov 20',
-    title: 'Applications: Code-Generation Agents',
+    title: 'Coding Agents',
     desc: 'Building agents that read, write, and execute code. Sandbox environments, self-correction, and autonomous software engineering.',
     tags: ['Code Generation', 'Sandbox', 'SWE Agents'],
     readingIdx: 10,
@@ -100,7 +100,7 @@ export const curriculum = [
   {
     week: 'W13',
     date: 'Nov 27',
-    title: 'Applications: Enterprise & Data Agents',
+    title: 'Enterprise Agents',
     desc: 'Agents for enterprise workflows: Text-to-SQL, database interaction, business process automation, and production deployment of agent systems.',
     tags: ['Text-to-SQL', 'Data Agents', 'Enterprise Workflows'],
     readingIdx: 11,
@@ -116,9 +116,9 @@ export const curriculum = [
   {
     week: 'W15',
     date: 'Dec 11',
-    title: 'Applications: Embodied & Social Agents',
-    desc: 'AI agents in physical and social environments: robotics, sim-to-real transfer, social simulation, persona modeling, and human-AI interaction.',
-    tags: ['Robotics', 'Social Simulation', 'Human-AI Interaction'],
+    title: 'Embodied Agents',
+    desc: 'AI agents in physical environments: vision-language-action models, robot foundation models, world models for embodied decision-making, sim-to-real transfer, and embodied benchmarks.',
+    tags: ['Robotics', 'VLA Models', 'World Models'],
     readingIdx: 13,
   },
   {

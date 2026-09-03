@@ -33,7 +33,7 @@ const cards = [
   },
   {
     title: 'Real-World Applications',
-    desc: 'Code-generation agents, desktop agents, web browsing agents, embodied agents, and social & empathetic agents.',
+    desc: 'Code-generation agents, desktop agents, web browsing agents, and embodied agents.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />

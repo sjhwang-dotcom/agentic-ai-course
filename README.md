@@ -31,7 +31,6 @@ Course website for **"Introduction to Agentic AI"**, a graduate-level course at 
 10. Code-Generation Agents (SWE-agent, CodeAct, OpenHands)
 11. Desktop & Web Agents (WebArena, OSWorld, Mind2Web)
 12. Embodied Agents (Voyager, SayCan, PaLM-E, pi_0)
-13. Social & Empathetic Agents (Generative Agents, SOTOPIA)
 
 ### Grading
 
