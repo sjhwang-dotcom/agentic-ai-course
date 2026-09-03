@@ -21,7 +21,7 @@ export default function Schedule() {
           <div className="section-label">Schedule</div>
           <h2 className="section-title">Tentative Schedule</h2>
           <p className="section-desc">
-            Spring 2026 &middot; Friday 9:00–12:00 &middot; Each week features a 1.5-hour lecture
+            Fall 2026 &middot; Friday 9:00–12:00 &middot; Each week features a 1.5-hour lecture
             followed by a 1.5-hour seminar with paper presentations.
           </p>
         </div>

@@ -232,7 +232,7 @@ export default function ProjectIdeas() {
 
       <footer className="ideas-footer">
         <div className="container">
-          AI 89900 Agentic AI &middot; KAIST Spring 2026 &middot;{' '}
+          AI 89900 Agentic AI &middot; KAIST Fall 2026 &middot;{' '}
           <a href="/">Course Home</a>
         </div>
       </footer>

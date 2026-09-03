@@ -1,7 +1,7 @@
 export const curriculum = [
   {
     week: 'W1',
-    date: 'Mar 6',
+    date: 'Sep 4',
     title: 'Introduction to Agentic AI',
     desc: 'Overview of AI agents, LLM foundations, the agentic paradigm, and the landscape of autonomous AI systems.',
     tags: ['LLM Foundations', 'Agent Paradigm', 'Course Overview'],
@@ -9,7 +9,7 @@ export const curriculum = [
   },
   {
     week: 'W2',
-    date: 'Mar 13',
+    date: 'Sep 11',
     title: 'Agentic Architecture Patterns',
     desc: 'Core design patterns for AI agents: ReAct, Chain-of-Thought, Plan-and-Execute, Reflection, and self-correction loops.',
     tags: ['ReAct', 'Plan-and-Execute', 'Reflection'],
@@ -17,7 +17,7 @@ export const curriculum = [
   },
   {
     week: 'W3',
-    date: 'Mar 20',
+    date: 'Sep 18',
     title: 'Tools',
     desc: 'Function calling, tool creation, Model Context Protocol (MCP), API integration, and building extensible agent-tool ecosystems.',
     tags: ['Function Calling', 'MCP', 'Tool Design'],
@@ -25,7 +25,7 @@ export const curriculum = [
   },
   {
     week: 'W4',
-    date: 'Mar 27',
+    date: 'Sep 25',
     title: 'Memory',
     desc: 'RAG pipelines, vector databases, embedding strategies, short-term and long-term memory architectures for persistent agent context.',
     tags: ['RAG', 'Vector DB', 'Long-term Memory'],
@@ -33,7 +33,7 @@ export const curriculum = [
   },
   {
     week: 'W5',
-    date: 'Apr 3',
+    date: 'Oct 2',
     title: 'Multi-Agent Systems',
     desc: 'Agent orchestration, delegation patterns, inter-agent communication, and collaborative problem solving across multiple agents.',
     tags: ['Orchestration', 'Delegation', 'Communication'],
@@ -41,7 +41,7 @@ export const curriculum = [
   },
   {
     week: 'W6',
-    date: 'Apr 10',
+    date: 'Oct 9',
     title: 'Agentic AI Frameworks',
     desc: 'Hands-on exploration of leading frameworks: LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, and Claude Agent SDK.',
     tags: ['LangGraph', 'CrewAI', 'AutoGen'],
@@ -49,7 +49,7 @@ export const curriculum = [
   },
   {
     week: 'W7',
-    date: 'Apr 17',
+    date: 'Oct 16',
     title: 'Self-Improvement',
     desc: 'Self-reflection, self-correction, self-evolution, and learning from feedback. How agents autonomously improve their own performance over time.',
     tags: ['Self-Reflection', 'Self-Training', 'Learning from Feedback'],
@@ -57,7 +57,7 @@ export const curriculum = [
   },
   {
     week: 'W8',
-    date: 'Apr 24',
+    date: 'Oct 23',
     title: 'Midterm Project Presentations',
     desc: 'Teams present their midterm progress reports, including system design, preliminary results, and revised project plans.',
     tags: ['Midterm Report', 'Presentation', 'Peer Feedback'],
@@ -65,7 +65,7 @@ export const curriculum = [
   },
   {
     week: 'W9',
-    date: 'May 1',
+    date: 'Oct 30',
     title: 'Performance Evaluation & Verification',
     desc: 'Benchmarks, verifiability, reproducibility, AgentOps observability, and systematic testing methodologies for AI agent systems.',
     tags: ['Benchmarks', 'Verifiability', 'AgentOps'],
@@ -73,7 +73,7 @@ export const curriculum = [
   },
   {
     week: 'W10',
-    date: 'May 8',
+    date: 'Nov 6',
     title: 'Safety & Security',
     desc: 'Prompt injection defense, output validation, guardrails, red-teaming, and building robust and trustworthy agent systems.',
     tags: ['Prompt Injection', 'Guardrails', 'Red-teaming'],
@@ -81,7 +81,7 @@ export const curriculum = [
   },
   {
     week: 'W11',
-    date: 'May 15',
+    date: 'Nov 13',
     title: 'Efficiency & Agentic AI Systems',
     desc: 'Agentic AI system architectures, LLM serving, inference optimization, agent runtime scaling, and cost optimization for production systems.',
     tags: ['Agent Systems', 'LLM Serving', 'Cost Optimization'],
@@ -89,7 +89,7 @@ export const curriculum = [
   },
   {
     week: 'W12',
-    date: 'May 22',
+    date: 'Nov 20',
     title: 'Applications: Code-Generation Agents',
     desc: 'Building agents that read, write, and execute code. Sandbox environments, self-correction, and autonomous software engineering.',
     tags: ['Code Generation', 'Sandbox', 'SWE Agents'],
@@ -97,7 +97,7 @@ export const curriculum = [
   },
   {
     week: 'W13',
-    date: 'May 29',
+    date: 'Nov 27',
     title: 'Applications: Enterprise & Data Agents',
     desc: 'Agents for enterprise workflows: Text-to-SQL, database interaction, business process automation, and production deployment of agent systems.',
     tags: ['Text-to-SQL', 'Data Agents', 'Enterprise Workflows'],
@@ -105,7 +105,7 @@ export const curriculum = [
   },
   {
     week: 'W14',
-    date: 'Jun 5',
+    date: 'Dec 4',
     title: 'Applications: Desktop & Web Agents',
     desc: 'Agents that interact with GUIs, navigate the web, extract information, and automate desktop workflows using screen understanding.',
     tags: ['Browser Agents', 'Desktop Automation', 'Screen Understanding'],
@@ -113,7 +113,7 @@ export const curriculum = [
   },
   {
     week: 'W15',
-    date: 'Jun 12',
+    date: 'Dec 11',
     title: 'Applications: Embodied & Social Agents',
     desc: 'AI agents in physical and social environments: robotics, sim-to-real transfer, social simulation, persona modeling, and human-AI interaction.',
     tags: ['Robotics', 'Social Simulation', 'Human-AI Interaction'],
@@ -121,7 +121,7 @@ export const curriculum = [
   },
   {
     week: 'W16',
-    date: 'Jun 19',
+    date: 'Dec 18',
     title: 'Final Project Presentations',
     desc: 'Teams present their final projects with live demos, followed by peer review and discussion on future directions in agentic AI.',
     tags: ['Final Report', 'Live Demo', 'Peer Review'],

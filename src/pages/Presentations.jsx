@@ -134,7 +134,7 @@ export default function Presentations() {
 
       <footer className="pres-footer">
         <div className="container">
-          AI 89900 Agentic AI &middot; KAIST Spring 2026 &middot;{' '}
+          AI 89900 Agentic AI &middot; KAIST Fall 2026 &middot;{' '}
           <a href="/">Back to Course</a>
         </div>
       </footer>

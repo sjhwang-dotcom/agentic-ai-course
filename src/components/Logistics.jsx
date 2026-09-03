@@ -1,5 +1,5 @@
 const items = [
-  { label: 'Semester', value: 'Spring 2026 (Mar 6 – Jun 19)' },
+  { label: 'Semester', value: 'Fall 2026 (Sep 4 – Dec 18)' },
   { label: 'Schedule', value: 'Friday 9:00 – 12:00' },
   { label: 'Format', value: '1.5h Lecture + 1.5h Seminar' },
   { label: 'Location', value: 'TBD' },

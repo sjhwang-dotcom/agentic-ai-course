@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="fade-in">
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
-            KAIST Graduate School of AI &middot; Spring 2026
+            KAIST Graduate School of AI &middot; Fall 2026
           </div>
           <h1>Agentic AI</h1>
           <p className="hero-sub">

@@ -15,7 +15,7 @@ Course website for **"Introduction to Agentic AI"**, a graduate-level course at 
 | **Schedule** | Every Friday, 9:00 AM – 12:00 PM |
 | **Format** | 1.5h Lecture + 1.5h Seminar |
 | **Duration** | 16 Weeks (Full Semester) |
-| **Semester** | Fall 2025 |
+| **Semester** | Fall 2026 |
 
 ### Topics Covered
 
