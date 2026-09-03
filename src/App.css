@@ -67,6 +67,9 @@ img { max-width: 100%; display: block; }
 .schedule-week { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 64px; }
 .schedule-week-num { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #F1F5F9; border-radius: 12px; font-size: 14px; font-weight: 700; color: #475569; }
 .schedule-item--highlight .schedule-week-num { background: #1E293B; color: #FFFFFF; }
+.schedule-item--holiday .schedule-week-num { background: #FFFFFF; color: #94A3B8; border: 1px dashed #CBD5E1; }
+.schedule-item--holiday .schedule-content h3 { color: #64748B; }
+.schedule-note { display: inline-flex; align-items: center; margin-bottom: 10px; padding: 4px 10px; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 6px; font-size: 12px; font-weight: 500; color: #92400E; }
 .schedule-week-date { font-size: 12px; font-weight: 500; color: #94A3B8; white-space: nowrap; }
 .schedule-content h3 { font-size: 17px; font-weight: 600; color: #1E293B; margin-bottom: 8px; }
 .schedule-content p { font-size: 14px; color: #64748B; line-height: 1.7; }

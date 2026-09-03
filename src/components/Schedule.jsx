@@ -33,7 +33,7 @@ export default function Schedule() {
 
             return (
               <div
-                className={`schedule-item fade-in${item.highlight ? ' schedule-item--highlight' : ''}`}
+                className={`schedule-item fade-in${item.highlight ? ' schedule-item--highlight' : ''}${item.holiday ? ' schedule-item--holiday' : ''}`}
                 key={item.week}
               >
                 <div className="schedule-item-header">
@@ -43,6 +43,7 @@ export default function Schedule() {
                   </div>
                   <div className="schedule-content">
                     <h3>{item.title}</h3>
+                    {item.note && <div className="schedule-note">{item.note}</div>}
                     <p>{item.desc}</p>
                     <div className="schedule-tags">
                       {item.tags.map((tag) => (
